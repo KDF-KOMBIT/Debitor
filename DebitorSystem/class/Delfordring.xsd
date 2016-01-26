@@ -36,14 +36,14 @@
 			<xs:documentation>Fortaeller enheden for "Antal". Kan f.eks. vaere liter, minutter eller kilometer. Angives som UUID i Klassifiaktion.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="DelfordringEnhedPris" type="xs:integer">
+	<xs:element name="DelfordringEnhedPris" type="oir:BelobType">
 		<xs:annotation>
 			<xs:documentation>Prisen for en enkelt enhed.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="DelfordringBelob" type="oir:BelobType">
 		<xs:annotation>
-			<xs:documentation>Angiver kravets belob i mindste betalingsenhed.</xs:documentation>
+			<xs:documentation>Angiver kravets beløb</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="DelfordringStiftelsesdato" type="xs:date">
@@ -74,6 +74,11 @@
 	<xs:element name="DelfordringÆndringÅrsagTekst" type="xs:string">
 		<xs:annotation>
 			<xs:documentation>Fritekstfelt til yderligere at beskrive en aendring.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DelfordringInddrivelseMarkering" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>Markering af hvorvidt en delfordring er sendt til inddrivelse. Hvis True er delfordringen sendt til indrivelse.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

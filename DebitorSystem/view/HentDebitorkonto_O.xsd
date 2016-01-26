@@ -21,6 +21,7 @@
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
 	<xs:include schemaLocation="../class/Valuta.xsd"/>
 	<xs:include schemaLocation="../class/DelfordringSpecifikation.xsd"/>
+	<xs:include schemaLocation="../class/Referencenogle.xsd"/>
 	<xs:include schemaLocation="../class/DelfordringTekstLinje.xsd"/>
 	<xs:include schemaLocation="../class/Posteringsoplysninger.xsd"/>
 	<xs:include schemaLocation="../class/DebitorFinansInfo.xsd"/>
@@ -35,9 +36,10 @@
 				<xs:element ref="oir:DebitorkontoType"/>
 				<xs:element ref="oir:DebitorkontoOrganisatoriskReference"/>
 				<xs:element ref="oir:DebitorkontoOprettetAfITSystem"/>
-				<xs:element ref="oir:DebitorkontoDebitorIdentifikation"/>
-				<xs:element ref="oir:DebitorkontoDebitorIdentifikationType"/>
+				<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
+				<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikationType"/>
 				<xs:element ref="oir:DebitorkontoOprettetDatoTid"/>
+				<xs:element ref="oir:DebitorkontoBSMarkering"/>
 				<xs:element name="DebitorSpecifikation" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
@@ -183,6 +185,7 @@
 										<xs:element ref="oir:DelfordringStiftelsesdato" minOccurs="0"/>
 										<xs:element ref="oir:DelfordringPeriodeFra"/>
 										<xs:element ref="oir:DelfordringPeriodeTil"/>
+										<xs:element ref="oir:DelfordringInddrivelseMarkering"/>
 										<xs:element name="ReferererTil" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
@@ -207,6 +210,14 @@
 												<xs:sequence>
 													<xs:element ref="oir:DelfordringSpecifikationVaerdi"/>
 													<xs:element ref="oir:DelfordringSpecifikationTekst" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Referencenogle" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:ReferencenogleType"/>
+													<xs:element ref="oir:ReferencenogleVaerdi"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>

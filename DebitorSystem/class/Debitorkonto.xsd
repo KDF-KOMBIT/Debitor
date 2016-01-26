@@ -25,12 +25,12 @@ Dette kunne for eksempel vaere at angive at Debitorkontoen er en Daginstitutions
 			<xs:documentation>Den organisatoriske reference til IT fagsystemet hvor debitorkontoen har ophav. Angivet som UUID i organisation.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="DebitorkontoDebitorIdentifikation" type="xs:string">
+	<xs:element name="DebitorkontoDebitorkontoIdentifikation" type="xs:string">
 		<xs:annotation>
 			<xs:documentation>Dette felt identificerer objektet eller personen som ligger til grund for debitorkontoen. Det kunne for eksemple vaere ejendomsnummeret, afgiftsnummeret fra en parkeringsafgift, cpr-nummer på et barn osv. Angivet som URN</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="DebitorkontoDebitorIdentifikationType" type="oir:UUIDType">
+	<xs:element name="DebitorkontoDebitorkontoIdentifikationType" type="oir:UUIDType">
 		<xs:annotation>
 			<xs:documentation>Fortaeller hvilken typen af Debitoridentifikation f.eks. CPR eller CVR. Angives som UUID i Klassifiaktion.</xs:documentation>
 		</xs:annotation>
@@ -38,6 +38,11 @@ Dette kunne for eksempel vaere at angive at Debitorkontoen er en Daginstitutions
 	<xs:element name="DebitorkontoOprettetDatoTid" type="xs:dateTime">
 		<xs:annotation>
 			<xs:documentation>Dato for hvornår bilaget er oprettet.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DebitorkontoBSMarkering" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>Markering af hvorvidt denne konto er tilmeldt betalingsservice. Hvis True er kontoen tilmeldt.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>
