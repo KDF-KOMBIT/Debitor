@@ -15,7 +15,7 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
-							<xs:element ref="oir:DebitorkontoDebitorIdentifikation"/>
+							<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
 							<xs:element ref="oir:DebitorkontoType"/>
 							<xs:element ref="oir:JuridiskAnsvarligPartID"/>
 							<xs:element ref="oir:JuridiskAnsvarligPartIDType"/>

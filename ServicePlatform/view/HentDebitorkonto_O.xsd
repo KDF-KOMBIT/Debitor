@@ -10,7 +10,6 @@
 	<xs:include schemaLocation="../class/Materialemodtager.xsd"/>
 	<xs:include schemaLocation="../class/Materialeanvendelse.xsd"/>
 	<xs:include schemaLocation="../class/MaterialemodtagerAlernativAdresse.xsd"/>
-	<xs:include schemaLocation="../class/JuridiskAnsvar.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
 	<xs:include schemaLocation="../class/Ligestillingspartner.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskAnsvarligAlernativAdresse.xsd"/>
@@ -36,8 +35,8 @@
 				<xs:element ref="oir:DebitorkontoType"/>
 				<xs:element ref="oir:DebitorkontoOrganisatoriskReference"/>
 				<xs:element ref="oir:DebitorkontoOprettetAfITSystem"/>
-				<xs:element ref="oir:DebitorkontoDebitorIdentifikation"/>
-				<xs:element ref="oir:DebitorkontoDebitorIdentifikationType"/>
+				<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
+				<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikationType"/>
 				<xs:element ref="oir:DebitorkontoOprettetDatoTid"/>
 				<xs:element name="DebitorSpecifikation" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
@@ -52,14 +51,6 @@
 						<xs:sequence>
 							<xs:element ref="oir:JuridiskAnsvarligPartID"/>
 							<xs:element ref="oir:JuridiskAnsvarligPartIDType"/>
-							<xs:element name="JuridiskAnsvar" minOccurs="1" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element ref="oir:JuridiskAnsvarFraDato"/>
-										<xs:element ref="oir:JuridiskAnsvarTilDato" minOccurs="0"/>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
 							<xs:element name="JuridiskAnsvarligAlternativAdresse" minOccurs="0">
 								<xs:complexType>
 									<xs:sequence>

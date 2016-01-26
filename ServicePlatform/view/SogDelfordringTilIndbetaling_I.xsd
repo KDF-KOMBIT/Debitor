@@ -8,6 +8,7 @@
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
 	<xs:include schemaLocation="../class/Fordring.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
+	<xs:include schemaLocation="../class/TransienteElementer.xsd"/>
 	<xs:element name="SogDelfordringTilIndbetaling">
 		<xs:complexType>
 			<xs:sequence>
@@ -34,20 +35,7 @@
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element ref="oir:DebitorkontoType" minOccurs="0" maxOccurs="unbounded"/>
-							<xs:element name="ForfaldsdatoFra">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element ref="oir:FordringForfaldsdato"/>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-							<xs:element name="ForfaldsdatoTil">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element ref="oir:FordringForfaldsdato"/>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
+							<xs:element ref="oir:RestanceDato"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

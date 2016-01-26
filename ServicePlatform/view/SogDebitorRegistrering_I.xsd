@@ -41,7 +41,7 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element ref="oir:DebitorkontoDebitorIdentifikation"/>
+							<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
 							<xs:element name="JuridiskAnsvarlig" minOccurs="0">
 								<xs:complexType>
 									<xs:sequence>

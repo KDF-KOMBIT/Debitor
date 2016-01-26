@@ -48,8 +48,8 @@
 									<xs:element ref="oir:DebitorkontoType"/>
 									<xs:element ref="oir:DebitorkontoOrganisatoriskReference"/>
 									<xs:element ref="oir:DebitorkontoOprettetAfITSystem"/>
-									<xs:element ref="oir:DebitorkontoDebitorIdentifikation"/>
-									<xs:element ref="oir:DebitorkontoDebitorIdentifikationType"/>
+									<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
+									<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikationType"/>
 									<xs:element ref="oir:DebitorkontoOprettetDatoTid"/>
 									<xs:element name="DebitorSpecifikation" minOccurs="0" maxOccurs="unbounded">
 										<xs:complexType>

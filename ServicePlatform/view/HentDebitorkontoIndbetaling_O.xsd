@@ -28,6 +28,9 @@
 	<xs:include schemaLocation="../class/JuridiskMedhaefterAlernativAdresse.xsd"/>
 	<xs:include schemaLocation="../class/Haeftelse.xsd"/>
 	<xs:include schemaLocation="../types/AdresseStruktur.xsd"/>
+	<xs:include schemaLocation="../class/Indbetaling.xsd"/>
+	<xs:include schemaLocation="../class/Daekning.xsd"/>
+	<xs:include schemaLocation="../class/Valuta.xsd"/>
 	<xs:element name="HentetDebitorkonto">
 		<xs:complexType>
 			<xs:sequence>
@@ -35,8 +38,8 @@
 				<xs:element ref="oir:DebitorkontoType"/>
 				<xs:element ref="oir:DebitorkontoOrganisatoriskReference"/>
 				<xs:element ref="oir:DebitorkontoOprettetAfITSystem"/>
-				<xs:element ref="oir:DebitorkontoDebitorIdentifikation"/>
-				<xs:element ref="oir:DebitorkontoDebitorIdentifikationType"/>
+				<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
+				<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikationType"/>
 				<xs:element ref="oir:DebitorkontoOprettetDatoTid"/>
 				<xs:element name="DebitorSpecifikation" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
@@ -166,6 +169,34 @@
 										<xs:element ref="oir:OpkraevningsoplysningerFakturaNummer"/>
 										<xs:element ref="oir:OpkraevningsoplysningerOrdreNummer"/>
 										<xs:element ref="oir:OpkraevningsoplysningerFakturadato"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Indbetaling" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="oir:IndbetalingRegistreringsdato"/>
+										<xs:element ref="oir:IndbetalingBetalingsdato"/>
+										<xs:element ref="oir:IndbetalingMyndighed"/>
+										<xs:element ref="oir:IndbetalingOrganisatoriskReference"/>
+										<xs:element ref="oir:IndbetalingOprettetAfITSystem"/>
+										<xs:element name="Daekning" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:DaekningBelob"/>
+													<xs:element ref="oir:DelfordringUnikIdentifikation"/>
+													<xs:element name="Valuta" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:ValutaValuta"/>
+																<xs:element ref="oir:ValutaKurs"/>
+																<xs:element ref="oir:ValutaOmregningsdato"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>

@@ -8,6 +8,7 @@
 	<xs:include schemaLocation="../class/Fordring.xsd"/>
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
+	<xs:include schemaLocation="../class/TransienteElementer.xsd"/>
 	<xs:element name="SogIndbetalingResultat">
 		<xs:complexType>
 			<xs:sequence>
@@ -32,6 +33,7 @@
 																<xs:element ref="oir:DelfordringUnikIdentifikation"/>
 																<xs:element ref="oir:DelfordringType"/>
 																<xs:element ref="oir:DelfordringBelob"/>
+																<xs:element ref="oir:RestanceBelob"/>
 															</xs:sequence>
 														</xs:complexType>
 													</xs:element>
