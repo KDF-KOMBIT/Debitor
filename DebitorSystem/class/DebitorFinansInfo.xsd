@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>Informationer der angiver hvordan delfordringen eller den afledte faktura skal posteres hos debitor. Vil vaere givet af debitor ved afgivelse af ordren.</xs:documentation>
+	</xs:annotation>
+	<xs:element name="DebitorFinansInfoFinanskontonummer" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Angiver modtagers finanskontonummer som evt. er oplyst ifm. ordregivning. Anvendes ifm. OIOUBL</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DebitorFinansInfoFinanskode" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Angiver modtagers finanskontokode som evt. er oplyst ifm. ordregivning. Anvendes ifm. OIOUBL</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

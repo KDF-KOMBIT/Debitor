@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>Ekstra navn til brug for adressering af breve, udover den juridiske ansvarlige.</xs:documentation>
+	</xs:annotation>
+	<xs:element name="LigestillingspartnerNavn" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Fuldt navn på ligestillingspartneren.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="LigestillingspartnerOprettelseDato" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Dato for hvornår en ligestillingpartner er oprettet.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="LigestillingspartnerAfsluttetDato" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Dato for hvornår et ligestillingspartnerforhold er afsluttet.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

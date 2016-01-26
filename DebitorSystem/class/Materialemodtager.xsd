@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>En materiale modtager er den part som på vegne af den juridiske ansvarlige har ansvaret for betaling af debitorkontoen. Hvis den juridsiske ejer er en virksomhed kunne dette vaere f.eks vaere identifikation af okonomiafdelingen. For personer kunne det f.eks. vaere et advokatkontor hvis personen er sat under administration. Der kan på ethvert givet tidspunkt kun vaere en Materialemodtager
+		</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/UUIDType.xsd"/>
+	<xs:element name="MaterialemodtagerPartID" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Identifikation af parten. Angivet som URN som defineret at OIO, f.eks. vil CVR vaere angivet som: URN:OIO:CVR:xxxxxxxx</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MaterialemodtagerPartIDType" type="oir:UUIDType">
+		<xs:annotation>
+			<xs:documentation>Identificere typen af PartID. Kan vaere CPR, CVR eller erstatningspersonnummer. Endelig liste vil vaere styret i klassifikation. Angives som UUID i Klassifiaktion.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MaterialemodtagerProduktionsenhedNummer" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Angiver nummeret for en virksomhed p-enhed. En P-enhed (produktionsenhed) er den adresse, som virksomheden drives fra. Fx en butik, filial, fabrik eller lignende. Anvendes til adressering. Angivet som URN som defineret at OIO: urn:oio:pnr:[0-9]{10}</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MaterialemodtagerEANNummer" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Identifikation af det modtagne EAN nummer (GLN nummer). En entydig identifikation af modtager enheden som kan tilknyttes en debitorkonto. Anvendes for at kunne sende faktura, kreditnota eller rykker elektronisk via OIOUBL snitfladen.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MaterialemodtagerFraDato" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Dato for hvornår en materialemodtager er gaeldende fra.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="MaterialemodtagerTilDato" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Dato for hvornår en materialemodtager er gaeldende til. Hvis feltet ikke er udfyldt vil der ingen ende vaere for perioden materialemodtageren har virkning. Dato for hvornår en materialemodtager er gaeldende til. Hvis feltet ikke er udfyldt vil der ingen ende vaere for perioden materialemodtageren har virkning.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

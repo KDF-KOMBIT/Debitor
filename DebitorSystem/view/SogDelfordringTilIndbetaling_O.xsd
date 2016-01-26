@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Eskild Nejsum (KOMBIT A/S) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>SogDelfordringTilIndbetaling_O</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
+	<xs:include schemaLocation="../class/Fordring.xsd"/>
+	<xs:include schemaLocation="../class/Delfordring.xsd"/>
+	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
+	<xs:element name="SogIndbetalingResultat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="JuridiskAnsvarlig" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="oir:JuridiskAnsvarligPartID"/>
+							<xs:element ref="oir:JuridiskAnsvarligPartIDType"/>
+							<xs:element name="Debitorkonto" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
+										<xs:element ref="oir:DebitorkontoType"/>
+										<xs:element name="Fordring" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:FordringUnikIdentifikation"/>
+													<xs:element ref="oir:FordringForfaldsdato"/>
+													<xs:element name="Delfordring" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:DelfordringUnikIdentifikation"/>
+																<xs:element ref="oir:DelfordringType"/>
+																<xs:element ref="oir:DelfordringBelob"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Eskild Nejsum (KOMBIT A/S) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>Opsamler oplysninger som er faelles for en raekke delfordringer.</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../types/UUIDType.xsd"/>
+	<xs:element name="FordringUnikIdentifikation" type="oir:UUIDType">
+		<xs:annotation>
+			<xs:documentation>Unik identifikation af fordringen.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="FordringOprettetAfITSystem" type="oir:UUIDType">
+		<xs:annotation>
+			<xs:documentation>Organisatorisk reference til det itsystem som har oprettet fordringen. Angivet som UUID i organisation.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="FordringOprettetDatoTid" type="xs:dateTime">
+		<xs:annotation>
+			<xs:documentation>Dato og tidspunkt for oprettelsen af Fordringen.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="FordringForfaldsdato" type="xs:date">
+		<xs:annotation>
+			<xs:documentation>Dato hvor fordringen forfalder.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="FordringOpkraevningStatus">
+		<xs:annotation>
+			<xs:documentation>Status for opkraevning af fordringer på debitorkontoen. Bruges i forbindelse med KY, som opretter fordringer der ikke må opkraeves for en ydelse ikke laengere gives. Når KY opretter fordringer, som ikke skal opkraeves for KY er faerdig med at udbetale ydelsen, så saetter de vaerdien til "passiv". Når ydelsen ophorer aendrer de alle fordringer som skal opkraeves til "aktiv".</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Passiv"/>
+				<xs:enumeration value="Aktiv"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

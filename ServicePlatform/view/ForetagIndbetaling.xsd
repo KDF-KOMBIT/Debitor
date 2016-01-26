@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>Foretag indbetaling</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
+	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
+	<xs:include schemaLocation="../class/Indbetaling.xsd"/>
+	<xs:include schemaLocation="../class/Daekning.xsd"/>
+	<xs:include schemaLocation="../class/Delfordring.xsd"/>
+	<xs:include schemaLocation="../class/Valuta.xsd"/>
+	<xs:element name="ForetagIndbetaling">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="oir:LeverancedataAfgivendeMyndighed"/>
+				<xs:element ref="oir:LeverancedataDebitoransvarligMyndighed"/>
+				<xs:element ref="oir:LeverancedataAfgivendeITSystem"/>
+				<xs:element ref="oir:LeverancedataTransaktionsID"/>
+				<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
+				<xs:element name="ObjektIdentifikation">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Indbetaling">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="oir:IndbetalingRegistreringsdato"/>
+							<xs:element ref="oir:IndbetalingBetalingsdato"/>
+							<xs:element ref="oir:IndbetalingMyndighed"/>
+							<xs:element ref="oir:IndbetalingOrganisatoriskReference"/>
+							<xs:element ref="oir:IndbetalingOprettetAfITSystem"/>
+							<xs:element name="Daekning" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="oir:DaekningBelob"/>
+										<xs:element ref="oir:DelfordringUnikIdentifikation"/>
+										<xs:element name="Valuta" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:ValutaValuta"/>
+													<xs:element ref="oir:ValutaKurs"/>
+													<xs:element ref="oir:ValutaOmregningsdato"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

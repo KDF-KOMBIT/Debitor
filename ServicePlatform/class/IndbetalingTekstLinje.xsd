@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation>Forklarende tekst til Indbetalingen. Det er nodvendigt med linjer i stedet for ét stort fritekst fordi fagsystemet skal kunne formatere teksten i tilfaelde af at de skal printes.</xs:documentation>
+	</xs:annotation>
+	<xs:element name="IndbetalingTekstLinjeIndex" type="xs:integer">
+		<xs:annotation>
+			<xs:documentation>Fortaeller tekstlinjens plads i forhold til andre tekstlinjer på samme indbetaling.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="IndbetalingTekstLinjeLinje" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Teksten som skal stå på linjen. Feltet har ingen max laengde, men feltet benyttes bla. til fakturatekstlinjer som har en max laengde på 60 karakterer, derfor bor man holde sig indenfor denne vaerdi.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>
