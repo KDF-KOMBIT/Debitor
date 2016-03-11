@@ -23,6 +23,7 @@
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element ref="oir:FordringUnikIdentifikation"/>
+										<xs:element ref="oir:FordringForfaldsdato"/>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>

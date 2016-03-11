@@ -25,6 +25,9 @@
 	<wsdl:message name="AfslutMaterialeModtager">
 		<wsdl:part name="parameters" element="oir:AfslutMaterialemodtagerReq"/>
 	</wsdl:message>
+	<wsdl:message name="AfslutLigestillingspartner">
+		<wsdl:part name="parameters" element="oir:AfslutLigestillingspartnerReq"/>
+	</wsdl:message>
 	<wsdl:message name="RetTilstand">
 		<wsdl:part name="parameters" element="oir:RetTilstandReq"/>
 	</wsdl:message>
@@ -75,6 +78,11 @@
 		</wsdl:operation>
 		<wsdl:operation name="AfslutMaterialeModtager">
 			<wsdl:input message="oir:AfslutMaterialeModtager"/>
+			<wsdl:output message="oir:Forretningskvittering"/>
+			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
+		</wsdl:operation>
+		<wsdl:operation name="AfslutLigestillingspartner">
+			<wsdl:input message="oir:AfslutLigestillingspartner"/>
 			<wsdl:output message="oir:Forretningskvittering"/>
 			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
 		</wsdl:operation>
@@ -158,6 +166,20 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="AfslutMaterialeModtager">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<!-- input policy reference -->
+				<wsp:PolicyReference URI="../policies/policies.xml#Input_Policy"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="StraksleveranceTransportkvittering">
+				<soap:fault name="StraksleveranceTransportkvittering" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AfslutLigestillingspartner">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->

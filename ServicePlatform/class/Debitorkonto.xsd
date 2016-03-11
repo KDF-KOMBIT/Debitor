@@ -40,4 +40,9 @@ Dette kunne for eksempel vaere at angive at Debitorkontoen er en Daginstitutions
 			<xs:documentation>Dato for hvornår bilaget er oprettet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="DebitorkontoBSMarkering" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>Markering af hvorvidt denne konto er tilmeldt betalingsservice. Hvis True er kontoen tilmeldt.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 </xs:schema>

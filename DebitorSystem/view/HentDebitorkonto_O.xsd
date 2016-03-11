@@ -28,6 +28,8 @@
 	<xs:include schemaLocation="../class/JuridiskMedhaefter.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskMedhaefterAlernativAdresse.xsd"/>
 	<xs:include schemaLocation="../class/Haeftelse.xsd"/>
+	<xs:include schemaLocation="../class/Indbetaling.xsd"/>
+	<xs:include schemaLocation="../class/Daekning.xsd"/>
 	<xs:include schemaLocation="../types/AdresseStruktur.xsd"/>
 	<xs:element name="HentetDebitorkonto">
 		<xs:complexType>
@@ -202,6 +204,14 @@
 													<xs:element ref="oir:ValutaValuta"/>
 													<xs:element ref="oir:ValutaKurs"/>
 													<xs:element ref="oir:ValutaOmregningsdato"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Indbetaling" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:IndbetalingRegistreringsdato"/>
+													<xs:element ref="oir:DaekningBelob"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>

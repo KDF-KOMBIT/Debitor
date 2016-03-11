@@ -21,12 +21,15 @@
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
 	<xs:include schemaLocation="../class/Valuta.xsd"/>
 	<xs:include schemaLocation="../class/DelfordringSpecifikation.xsd"/>
+	<xs:include schemaLocation="../class/Referencenogle.xsd"/>
 	<xs:include schemaLocation="../class/DelfordringTekstLinje.xsd"/>
 	<xs:include schemaLocation="../class/Posteringsoplysninger.xsd"/>
 	<xs:include schemaLocation="../class/DebitorFinansInfo.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskMedhaefter.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskMedhaefterAlernativAdresse.xsd"/>
 	<xs:include schemaLocation="../class/Haeftelse.xsd"/>
+	<xs:include schemaLocation="../class/Indbetaling.xsd"/>
+	<xs:include schemaLocation="../class/Daekning.xsd"/>
 	<xs:include schemaLocation="../types/AdresseStruktur.xsd"/>
 	<xs:element name="HentetDebitorkonto">
 		<xs:complexType>
@@ -38,6 +41,7 @@
 				<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
 				<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikationType"/>
 				<xs:element ref="oir:DebitorkontoOprettetDatoTid"/>
+				<xs:element ref="oir:DebitorkontoBSMarkering"/>
 				<xs:element name="DebitorSpecifikation" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
@@ -183,6 +187,7 @@
 										<xs:element ref="oir:DelfordringStiftelsesdato" minOccurs="0"/>
 										<xs:element ref="oir:DelfordringPeriodeFra"/>
 										<xs:element ref="oir:DelfordringPeriodeTil"/>
+										<xs:element ref="oir:DelfordringInddrivelseMarkering"/>
 										<xs:element name="ReferererTil" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
@@ -202,11 +207,27 @@
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
+										<xs:element name="Indbetaling" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:IndbetalingRegistreringsdato"/>
+													<xs:element ref="oir:DaekningBelob"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
 										<xs:element name="DelfordringSpecifikation" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element ref="oir:DelfordringSpecifikationVaerdi"/>
 													<xs:element ref="oir:DelfordringSpecifikationTekst" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Referencenogle" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:ReferencenogleType"/>
+													<xs:element ref="oir:ReferencenogleVaerdi"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>

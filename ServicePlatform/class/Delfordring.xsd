@@ -76,4 +76,9 @@
 			<xs:documentation>Fritekstfelt til yderligere at beskrive en aendring.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
+	<xs:element name="DelfordringInddrivelseMarkering" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>Markering af hvorvidt en delfordring er sendt til inddrivelse. Hvis True er delfordringen sendt til indrivelse.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
 </xs:schema>
