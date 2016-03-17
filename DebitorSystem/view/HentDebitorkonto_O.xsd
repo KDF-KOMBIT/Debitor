@@ -73,7 +73,7 @@
 							<xs:element ref="oir:MaterialemodtagerPartID"/>
 							<xs:element ref="oir:MaterialemodtagerPartIDType"/>
 							<xs:element ref="oir:MaterialemodtagerProduktionsenhedNummer" minOccurs="0"/>
-							<xs:element ref="oir:MaterialemodtagerEANNummer" minOccurs="0"/>
+							<xs:element ref="oir:MaterialemodtagerGLNNummer" minOccurs="0"/>
 							<xs:element ref="oir:MaterialemodtagerFraDato"/>
 							<xs:element ref="oir:MaterialemodtagerTilDato" minOccurs="0"/>
 							<xs:element name="Materialeanvendelse" maxOccurs="unbounded">
