@@ -40,9 +40,9 @@ Naar denne vaerdi er angivet vil hverken debitorsystemet eller fagsystemet foret
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:enumeration value="Opkraev"/>
-				<xs:enumeration value="Ingen opkraevning"/>
-				<xs:enumeration value="Afvent opkraevning"/>
+				<xs:enumeration value="^Opkraev$"/>
+				<xs:enumeration value="^Ingen opkraevning$"/>
+				<xs:enumeration value="^Afvent opkraevning$"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
