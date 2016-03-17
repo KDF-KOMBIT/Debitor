@@ -27,22 +27,22 @@
 	</xs:element>
 	<xs:element name="FordringOpkraevningStatus">
 		<xs:annotation>
-			<xs:documentation>Status for opkrævning af fordringen på debitorkontoen.
-Når en fordring oprettes skal der vælges en af tre opkrævningsstatusser. Opkrævningsstatussen bestemmer hvordan opkrævningsforløbet for fordringen vil foregå. De tre værdier med deres funktion er beskrevet herunder:
+			<xs:documentation>Status for opkraevning af fordringen paa debitorkontoen.
+Naar en fordring oprettes skal der vaelges en af tre opkraevningsstatusser. Opkraevningsstatussen bestemmer hvordan opkraevningsforlobet for fordringen vil foregaa. De tre vaerdier med deres funktion er beskrevet herunder:
 
-Opkræv:
-Hvis denne markering er sat vil debitorsystemet foretage opkrævning af fordringen. Værdien kan ikke ændres.
-Ingen Opkrævning:
-Debitorsystemet skal ikke foretage opkrævning. I de tilfælde hvor fagsystemet selv foretager opkrævningen er det vigtigt at der medsendes opkrævningsoplysninger, således at indbetalinger kan kan knyttes til de rigtige fordringer. Værdien kan ikke ændres.
-Afvent opkrævning:
-Når denne værdi er angivet vil hverken debitorsystemet eller fagsystemet foretage en opkrævning. Markeringen kan senere ændres til "Opkræv" med et webservicekald. Benyttes f.eks. af KY. Når en tilbagebetalingspligtig ydelse udbetales vil det tilbagebetalingspligtige beløb blive oprettet som en fordring med markeringen "Afvent opkrævning". Når ydelsen efter en periode ophører, vil KY ændre opkrævningstatussen for de oprettede fordringer til "opkræv" således at debitorsystemet kan opkræve de de tilbagebetalingspligtige beløb. Værdien ændres med et servicekald.
+Opkraev:
+Hvis denne markering er sat vil debitorsystemet foretage opkraevning af fordringen. Vaerdien kan ikke aendres.
+Ingen Opkraevning:
+Debitorsystemet skal ikke foretage opkraevning. I de tilfaelde hvor fagsystemet selv foretager opkraevningen er det vigtigt at der medsendes opkraevningsoplysninger, saaledes at indbetalinger kan kan knyttes til de rigtige fordringer. Vaerdien kan ikke aendres.
+Afvent opkraevning:
+Naar denne vaerdi er angivet vil hverken debitorsystemet eller fagsystemet foretage en opkraevning. Markeringen kan senere aendres til "Opkraev" med et webservicekald. Benyttes f.eks. af KY. Naar en tilbagebetalingspligtig ydelse udbetales vil det tilbagebetalingspligtige belob blive oprettet som en fordring med markeringen "Afvent opkraevning". Naar ydelsen efter en periode ophorer, vil KY aendre opkraevningstatussen for de oprettede fordringer til "opkraev" saaledes at debitorsystemet kan opkraeve de de tilbagebetalingspligtige belob. Vaerdien aendres med et servicekald.
 </xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:enumeration value="Opkræv"/>
-				<xs:enumeration value="Ingen opkrævning"/>
-				<xs:enumeration value="Afvent opkrævning"/>
+				<xs:enumeration value="Opkraev"/>
+				<xs:enumeration value="Ingen opkraevning"/>
+				<xs:enumeration value="Afvent opkraevning"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>

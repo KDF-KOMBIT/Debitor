@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
 	<xs:annotation>
-		<xs:documentation>En materiale modtager er den part som på vegne af den juridiske ansvarlige har ansvaret for betaling af debitorkontoen. Hvis den juridsiske ejer er en virksomhed kunne dette vaere f.eks vaere identifikation af okonomiafdelingen. For personer kunne det f.eks. vaere et advokatkontor hvis personen er sat under administration. Der kan på ethvert givet tidspunkt kun vaere en Materialemodtager
+		<xs:documentation>En materiale modtager er den part som paa vegne af den juridiske ansvarlige har ansvaret for betaling af debitorkontoen. Hvis den juridsiske ejer er en virksomhed kunne dette vaere f.eks vaere identifikation af okonomiafdelingen. For personer kunne det f.eks. vaere et advokatkontor hvis personen er sat under administration. Der kan paa ethvert givet tidspunkt kun vaere en Materialemodtager
 		</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/UUIDType.xsd"/>
@@ -27,12 +27,12 @@
 	</xs:element>
 	<xs:element name="MaterialemodtagerFraDato" type="xs:date">
 		<xs:annotation>
-			<xs:documentation>Dato for hvornår en materialemodtager er gaeldende fra.</xs:documentation>
+			<xs:documentation>Dato for hvornaar en materialemodtager er gaeldende fra.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="MaterialemodtagerTilDato" type="xs:date">
 		<xs:annotation>
-			<xs:documentation>Dato for hvornår en materialemodtager er gaeldende til. Hvis feltet ikke er udfyldt vil der ingen ende vaere for perioden materialemodtageren har virkning. Dato for hvornår en materialemodtager er gaeldende til. Hvis feltet ikke er udfyldt vil der ingen ende vaere for perioden materialemodtageren har virkning.</xs:documentation>
+			<xs:documentation>Dato for hvornaar en materialemodtager er gaeldende til. Hvis feltet ikke er udfyldt vil der ingen ende vaere for perioden materialemodtageren har virkning. Dato for hvornaar en materialemodtager er gaeldende til. Hvis feltet ikke er udfyldt vil der ingen ende vaere for perioden materialemodtageren har virkning.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

@@ -193,8 +193,8 @@
 												<xs:sequence>
 													<xs:element ref="oir:DelfordringUnikIdentifikation"/>
 													<xs:element ref="oir:DelfordringKreditNotaKrav"/>
-													<xs:element ref="oir:DelfordringÆndringÅrsagKode"/>
-													<xs:element ref="oir:DelfordringÆndringÅrsagTekst"/>
+													<xs:element ref="oir:DelfordringAendringAarsagKode"/>
+													<xs:element ref="oir:DelfordringAendringAarsagTekst"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>

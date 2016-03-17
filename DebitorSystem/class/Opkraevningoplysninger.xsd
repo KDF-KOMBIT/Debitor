@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
 	<xs:annotation>
-		<xs:documentation>I nogle tilfaelde opkraeves delfordringen samtidig med at den opstår f.eks. ved p-afgifter. Klassen indeholder de felter der er nodvendige for at kunne identificere fremtidige indbetalinger og for at kunne rykke ved manglende indbetaling. Opkraevningen oprettes altid sammen med en fordring, den kan oprettes senere og knyttes til en eksisterende fordring.</xs:documentation>
+		<xs:documentation>I nogle tilfaelde opkraeves delfordringen samtidig med at den opstaar f.eks. ved p-afgifter. Klassen indeholder de felter der er nodvendige for at kunne identificere fremtidige indbetalinger og for at kunne rykke ved manglende indbetaling. Opkraevningen oprettes altid sammen med en fordring, den kan oprettes senere og knyttes til en eksisterende fordring.</xs:documentation>
 	</xs:annotation>
 	<xs:element name="OpkraevningsoplysningerBetalingsReference" type="xs:string">
 		<xs:annotation>
-			<xs:documentation>Angiver hvilken betalingsreference, der horer til en allerede udskrevet faktura. Bruges senere ved modtagelse af indbetalinger til sådan en faktura. F.eks. laeselinjen fra fakturaen.</xs:documentation>
+			<xs:documentation>Angiver hvilken betalingsreference, der horer til en allerede udskrevet faktura. Bruges senere ved modtagelse af indbetalinger til saadan en faktura. F.eks. laeselinjen fra fakturaen.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="OpkraevningsoplysningerSidsteRettidigBetalingsdato" type="xs:date">
@@ -20,7 +20,7 @@
 	</xs:element>
 	<xs:element name="OpkraevningsoplysningerOrdreNummer" type="xs:string">
 		<xs:annotation>
-			<xs:documentation>Angiver et ordrenummer, der kan benyttes til som reference på en faktura.</xs:documentation>
+			<xs:documentation>Angiver et ordrenummer, der kan benyttes til som reference paa en faktura.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="OpkraevningsoplysningerFakturadato" type="xs:date">

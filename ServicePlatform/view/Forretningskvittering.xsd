@@ -70,7 +70,7 @@
 															</xs:choice>
 														</xs:complexType>
 													</xs:element>
-													<xs:element ref="oir:KvitteringÅrsag"/>
+													<xs:element ref="oir:KvitteringAarsag"/>
 													<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:sequence>

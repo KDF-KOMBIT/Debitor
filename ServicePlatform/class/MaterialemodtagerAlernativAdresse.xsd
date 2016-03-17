@@ -5,12 +5,12 @@
 	</xs:annotation>
 	<xs:element name="MaterialemodtagerAlternativAdresseFraDato" type="xs:date">
 		<xs:annotation>
-			<xs:documentation>Dato for hvornår en MaterialemodtagerAlternativAdresse er gaeldende fra.</xs:documentation>
+			<xs:documentation>Dato for hvornaar en MaterialemodtagerAlternativAdresse er gaeldende fra.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="MaterialemodtagerAlternativAdresseTilDato" type="xs:date">
 		<xs:annotation>
-			<xs:documentation>Dato for hvornår en MaterialemodtagerAlternativAdresse er gaeldende til.</xs:documentation>
+			<xs:documentation>Dato for hvornaar en MaterialemodtagerAlternativAdresse er gaeldende til.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

@@ -10,7 +10,7 @@
 	</xs:element>
 	<xs:element name="DelfordringTekstLinjeTekst" type="xs:string">
 		<xs:annotation>
-			<xs:documentation>Teksten som skal stå på linjen. Feltet har ingen max laengde, men feltet benyttes bla. til fakturatekstlinjer som har en max laengde på 60 karakterer, derfor bor man holde sig indenfor denne vaerdi.</xs:documentation>
+			<xs:documentation>Teksten som skal staa paa linjen. Feltet har ingen max laengde, men feltet benyttes bla. til fakturatekstlinjer som har en max laengde paa 60 karakterer, derfor bor man holde sig indenfor denne vaerdi.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

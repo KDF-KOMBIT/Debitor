@@ -37,7 +37,7 @@
 	</xs:element>
 	<xs:element name="LeverancedataRegistreringstidspunkt" type="xs:dateTime">
 		<xs:annotation>
-			<xs:documentation>Tidsstempel for hvornår leverancen er dannet.</xs:documentation>
+			<xs:documentation>Tidsstempel for hvornaar leverancen er dannet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="LeverancedataTransaktionsID" type="oir:UUIDType">

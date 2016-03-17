@@ -12,7 +12,7 @@
 	</xs:element>
 	<xs:element name="IndbetalingBetalingsdato" type="xs:date">
 		<xs:annotation>
-			<xs:documentation>Dato (valordato/betalingsdato) for hvornår indbetalingen er foretaget i fagsystemet.</xs:documentation>
+			<xs:documentation>Dato (valordato/betalingsdato) for hvornaar indbetalingen er foretaget i fagsystemet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="IndbetalingMyndighed" type="xs:string">

@@ -13,7 +13,7 @@
 				<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
 				<xs:element ref="oir:KvitteringTransportResultat"/>
 				<xs:element ref="oir:KvitteringBegrundelse"/>
-				<xs:element ref="oir:KvitteringÅrsag"/>
+				<xs:element ref="oir:KvitteringAarsag"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

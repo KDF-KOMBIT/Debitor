@@ -7,6 +7,7 @@
 	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
 	<xs:include schemaLocation="../class/Fordring.xsd"/>
+	<xs:include schemaLocation="../class/TransienteElementer.xsd"/>
 	<xs:element name="RetTilstand">
 		<xs:complexType>
 			<xs:sequence>
@@ -31,6 +32,7 @@
 					</xs:complexType>
 				</xs:element>
 				<xs:element ref="oir:FordringOpkraevningStatus"/>
+				<xs:element ref="oir:VirkningDatoFra"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

@@ -5,7 +5,7 @@
 	</xs:annotation>
 	<xs:element name="AdresselinjeTekst" type="xs:string">
 		<xs:annotation>
-			<xs:documentation>I linjen kan angives en ustruktureret adresse, såfremt de ovrige felter ikke kan anvendes.</xs:documentation>
+			<xs:documentation>I linjen kan angives en ustruktureret adresse, saafremt de ovrige felter ikke kan anvendes.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

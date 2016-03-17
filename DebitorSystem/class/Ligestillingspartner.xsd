@@ -5,17 +5,17 @@
 	</xs:annotation>
 	<xs:element name="LigestillingspartnerNavn" type="xs:string">
 		<xs:annotation>
-			<xs:documentation>Fuldt navn på ligestillingspartneren.</xs:documentation>
+			<xs:documentation>Fuldt navn paa ligestillingspartneren.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="LigestillingspartnerOprettelseDato" type="xs:date">
 		<xs:annotation>
-			<xs:documentation>Dato for hvornår en ligestillingpartner er oprettet.</xs:documentation>
+			<xs:documentation>Dato for hvornaar en ligestillingpartner er oprettet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="LigestillingspartnerAfsluttetDato" type="xs:date">
 		<xs:annotation>
-			<xs:documentation>Dato for hvornår et ligestillingspartnerforhold er afsluttet.</xs:documentation>
+			<xs:documentation>Dato for hvornaar et ligestillingspartnerforhold er afsluttet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

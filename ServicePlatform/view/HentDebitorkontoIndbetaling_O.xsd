@@ -172,7 +172,7 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="Indbetaling" maxOccurs="unbounded" minOccurs="0">
+							<xs:element name="Indbetaling" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element ref="oir:IndbetalingRegistreringsdato"/>
@@ -219,8 +219,8 @@
 												<xs:sequence>
 													<xs:element ref="oir:DelfordringUnikIdentifikation"/>
 													<xs:element ref="oir:DelfordringKreditNotaKrav"/>
-													<xs:element ref="oir:DelfordringÆndringÅrsagKode"/>
-													<xs:element ref="oir:DelfordringÆndringÅrsagTekst"/>
+													<xs:element ref="oir:DelfordringAendringAarsagKode"/>
+													<xs:element ref="oir:DelfordringAendringAarsagTekst"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>

@@ -6,7 +6,7 @@
 	<xs:include schemaLocation="../types/UUIDType.xsd"/>
 	<xs:element name="DebitorSpecifikationVaerdi" type="oir:UUIDType">
 		<xs:annotation>
-			<xs:documentation>Bestemmer vaerdien af DebitorSpecifikation. Vaerdien der skal bygges forretningslogik på baggrund af skal angives i type. F.eks. vil det betyde at der for tilbagebetalingsparagraf vil vaere givet den specifikke vaerdi, f.eks. "Tilbagebetalingsparagraf §66". Angives som UUID i Klassifiaktion.</xs:documentation>
+			<xs:documentation>Bestemmer vaerdien af DebitorSpecifikation. Vaerdien der skal bygges forretningslogik paa baggrund af skal angives i type. F.eks. vil det betyde at der for tilbagebetalingsparagraf vil vaere givet den specifikke vaerdi, f.eks. "Tilbagebetalingsparagraf §66". Angives som UUID i Klassifiaktion.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="DebitorSpecifikationTekst" type="xs:string">
