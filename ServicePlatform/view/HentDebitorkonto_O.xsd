@@ -188,6 +188,7 @@
 										<xs:element ref="oir:DelfordringPeriodeFra"/>
 										<xs:element ref="oir:DelfordringPeriodeTil"/>
 										<xs:element ref="oir:DelfordringInddrivelseMarkering"/>
+										<xs:element ref="oir:DelfordringUdbetalingskontoReference" minOccurs="0"/>
 										<xs:element name="ReferererTil" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
