@@ -83,12 +83,12 @@
 	</xs:element>
 	<xs:element name="DelfordringFolsomhed" type="oir:UUIDType">
 		<xs:annotation>
-			<xs:documentation>Angiver folsomhed for delfordringen. Benyttes til dataafgraensning ved personfolsomme oplysninger. Angivet som UUID i Klassifikation.</xs:documentation>
+			<xs:documentation>Indeholder Fagsystemets angivelse af folsomhed for delfordringen. Benyttes til dataafgraensning jf. Persondataloven. Angivet som UUID i Klassifikation.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="DelfordringUdbetalingskontoReference" type="oir:UUIDType">
+	<xs:element name="DelfordringKreditorkontoReference" type="oir:UUIDType">
 		<xs:annotation>
-			<xs:documentation>Angiver kontoen som udbetalingen der ligger til grund delfordringen er betalt fra. Benyttes i forbindelse med ydelsesrefusion. Angives som UUID i Klassifikation</xs:documentation>
+			<xs:documentation>Saafremt delfordringen kan refereres til en kreditorpostering, angives kontoen for kreditorpostering her som reference. Angivelsen er ikke obligatorisk, dog skal alle debitorforhold, delfordringer, som er omfattet af lov om Ydelsesrefusion medtager denne reference. Angives som UUID i Klassifikation repraesenterende Indenrigsministeriets kontoplan for kommuner.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>
