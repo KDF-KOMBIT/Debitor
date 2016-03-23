@@ -3,7 +3,6 @@
 	<xs:annotation>
 		<xs:documentation>JuridiskAnsvarlig er den person eller virksomhed som har det juridiske ansvar for betalingen af debitorforholdet. Vil oftest vaere den samme som Debitor. Et eksempel hvor den vil anderledes er ved ejendomskat hvor debitorkravet er tilknyttet ejendommen og ikke personen.</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="../types/UUIDType.xsd"/>
 	<xs:element name="JuridiskAnsvarligPartID">
 		<xs:annotation>
 			<xs:documentation>Identifikation af parten. Angivet som URN. CVR vaere angivet som: urn:oio:cvr-nr:[0-9]{10}. CPR vil vaere angivet som urn:oio:cpr-nr:[0-9]{8}</xs:documentation>
