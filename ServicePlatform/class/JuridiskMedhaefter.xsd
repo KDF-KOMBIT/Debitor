@@ -14,9 +14,15 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="JuridiskMedhaefterPartIDType" type="xs:string">
+	<xs:element name="JuridiskMedhaefterPartIDType">
 		<xs:annotation>
-			<xs:documentation>Identificere typen af PartID. Kan vaere CPR, CVR eller erstatningspersonnummer. Endelig liste vil vaere styret i klassifikation. Angives som UUID i Klassifiaktion.</xs:documentation>
+			<xs:documentation>Identificere typen af PartID. Kan vaere CPR, CVR.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="CPR"/>
+				<xs:enumeration value="CVR"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 </xs:schema>

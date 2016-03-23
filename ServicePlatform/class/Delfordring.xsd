@@ -26,10 +26,13 @@
 			<xs:documentation>Dato og tidspunkt for oprettelsen af delfordringen</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="DelfordringAntal" type="xs:integer">
+	<xs:element name="DelfordringAntal">
 		<xs:annotation>
 			<xs:documentation>Angiver det antal enheder der onskes betalt for. Antallet er angivet i tusinddele – dvs. 1,000 skrives som 1000. Bruges i forbindelse med elektronisk opkraevning.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:integer"><xs:totalDigits value="18"/></xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 	<xs:element name="DelfordringEnhed" type="oir:UUIDType">
 		<xs:annotation>
@@ -71,10 +74,13 @@
 			<xs:documentation>Kode for aarsag til aendringen. Naar man oprette en delfordring som f.eks. er en nedskrivning til en anden fordring, skal man angive aarsagen til dette. Angives som UUID i Klassifiaktion.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="DelfordringAendringAarsagTekst" type="xs:string">
+	<xs:element name="DelfordringAendringAarsagTekst">
 		<xs:annotation>
 			<xs:documentation>Fritekstfelt til yderligere at beskrive en aendring.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string"><xs:maxLength value="100"/></xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 	<xs:element name="DelfordringInddrivelseMarkering" type="xs:boolean">
 		<xs:annotation>

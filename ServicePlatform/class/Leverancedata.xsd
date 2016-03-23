@@ -5,35 +5,54 @@
 	</xs:annotation>
 	<xs:include schemaLocation="../types/UUIDType.xsd"/>
 	<xs:include schemaLocation="../types/BelobType.xsd"/>
-	<xs:element name="LeverancedataAntalDebitorkonto" type="xs:integer">
+	<xs:element name="LeverancedataAntalDebitorkonto">
 		<xs:annotation>
 			<xs:documentation>Antallet af debitorkonti i leverancen.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:integer"><xs:totalDigits value="4"/></xs:restriction>
+		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataAntalFordring" type="xs:integer">
+	<xs:element name="LeverancedataAntalFordring">
 		<xs:annotation>
 			<xs:documentation>Antallet af fordringer i Leverancen.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:integer"><xs:totalDigits value="4"/></xs:restriction>
+		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataAntalDelfordring" type="xs:integer">
+	<xs:element name="LeverancedataAntalDelfordring">
 		<xs:annotation>
 			<xs:documentation>Antallet af delfordringer i leverancen.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:integer"><xs:totalDigits value="4"/></xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 	<xs:element name="LeverancedataAfgivendeITSystem" type="xs:string">
 		<xs:annotation>
 			<xs:documentation>IT systemet som har skabt leverancen. Angivet som URN i organisation.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LeverancedataAfgivendeMyndighed" type="xs:string">
+	<xs:element name="LeverancedataAfgivendeMyndighed">
 		<xs:annotation>
 			<xs:documentation>Myndighed som har dannet leverencen. Angivet som URN i organisation</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataDebitoransvarligMyndighed" type="xs:string">
+	<xs:element name="LeverancedataDebitoransvarligMyndighed">
 		<xs:annotation>
 			<xs:documentation>Myndigheden som har det debitormaessige ansvar for leverancen. Angivet som URN i organisation.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 	<xs:element name="LeverancedataRegistreringstidspunkt" type="xs:dateTime">
 		<xs:annotation>

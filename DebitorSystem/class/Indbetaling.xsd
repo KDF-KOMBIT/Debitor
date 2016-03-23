@@ -15,10 +15,15 @@
 			<xs:documentation>Dato (valordato/betalingsdato) for hvornaar indbetalingen er foretaget i fagsystemet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="IndbetalingMyndighed" type="xs:string">
+	<xs:element name="IndbetalingMyndighed">
 		<xs:annotation>
-			<xs:documentation>Fortaeller hvilken myndighed der har foretaget indbetalingen.</xs:documentation>
+			<xs:documentation>Fortaeller hvilken myndighed der har foretaget indbetalingen. Angivet som URN i Organisation.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="40"/>
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 	<xs:element name="IndbetalingOrganisatoriskReference" type="oir:UUIDType">
 		<xs:annotation>

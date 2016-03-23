@@ -9,9 +9,12 @@
 			<xs:documentation>Bestemmer typen af Delfordringsspecifikation. Kunne for eksempel vaere Skattebelob ifm. kontanthjaelpskrav. Vaerdien der skal bygges forretningslogik paa baggrund af angives i type. F.eks. vil det betyde at der for tilbagebetalingsparagraf, vil vaere givet den specifikke vaerdi, f.eks. "Tilbagebetalingsparagraf §66". Angives som UUID i Klassifiaktion.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="DelfordringSpecifikationTekst" type="xs:string">
+	<xs:element name="DelfordringSpecifikationTekst">
 		<xs:annotation>
 			<xs:documentation>Tekst til Delfordringspecifikationen. I nogle tilfaelde skal forretningslogikken bruge variabel tekst, som ikke er klassifceret. F.eks. vil typen "Skattebelob" fortaelle at der skal igangsaettes en forretningsgang, hvor teksten her vil angive selve belobet.</xs:documentation>
 		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string"><xs:maxLength value="255"/></xs:restriction>
+		</xs:simpleType>
 	</xs:element>
 </xs:schema>
