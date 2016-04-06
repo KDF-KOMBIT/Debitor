@@ -105,7 +105,7 @@
 									<xs:sequence>
 										<xs:element ref="oir:MaterialemodtagerPartID"/>
 										<xs:element ref="oir:MaterialemodtagerPartIDType"/>
-										<xs:element name="MaterialemodtagerAlternativAdresse" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="MaterialemodtagerAlternativAdresseStruktur" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element ref="oir:MaterialemodtagerAlternativAdresseFraDato"/>
@@ -122,7 +122,7 @@
 									<xs:sequence>
 										<xs:element ref="oir:JuridiskMedhaefterPartID"/>
 										<xs:element ref="oir:JuridiskMedhaefterPartIDType"/>
-										<xs:element name="JuridiskMedhaefterAlternativAdresse" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="JuridiskMedhaefterAlternativAdresseStruktur" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element ref="oir:JuridiskMedhaefterAlternativAdresseFraDato"/>
