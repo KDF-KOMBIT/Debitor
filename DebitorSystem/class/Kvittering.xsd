@@ -40,9 +40,9 @@
 				<xs:documentation>Resultatet af den forretningsmaessige validering i Debitorsystemet: Accepteret: Debitorsystemet har accepteret dataover-dragelse. Afvist: Debitorsystemet accepterer ikke dataover-dragelse. Under behandling: Debitorsystemet er i faerd med at tage stilling til dataoverdragelsen.</xs:documentation>
 			</xs:annotation>
 			<xs:restriction base="xs:string">
-				<xs:enumeration value="^Accepteret$"/>
-				<xs:enumeration value="^Afvist$"/>
-				<xs:enumeration value="^Under behandling$"/>
+				<xs:enumeration value="Accepteret"/>
+				<xs:enumeration value="Afvist"/>
+				<xs:enumeration value="Under behandling"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
