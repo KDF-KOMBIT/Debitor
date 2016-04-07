@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>Angiver kontaktinformation paa kontoret eller personen som skal modtage fakturaen hos debitor. Informationerne er en yderligere specificering af den part der skal modtage materiale omkring debitorkontoen. Men da to fordringer paa samme konto godt kan haandteres af to forskellige personer haeftes informationerne til Fordringen.</xs:documentation>
 	</xs:annotation>
