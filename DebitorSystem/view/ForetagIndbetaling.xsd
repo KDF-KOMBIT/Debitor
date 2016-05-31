@@ -8,7 +8,6 @@
 	<xs:include schemaLocation="../class/Indbetaling.xsd"/>
 	<xs:include schemaLocation="../class/Daekning.xsd"/>
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
-	<xs:include schemaLocation="../class/PrimaereDimensioner.xsd"/>
 	<xs:include schemaLocation="../class/SekundaereDimensioner.xsd"/>
 	<xs:include schemaLocation="../class/Valuta.xsd"/>
 	<xs:element name="ForetagIndbetaling">
@@ -37,17 +36,6 @@
 							<xs:element name="Konteringsdimensioner">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="PrimaereDimensioner" minOccurs="0">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element ref="oir:PrimaereDimensionerOrganisatoriskReference"/>
-													<xs:element ref="oir:PrimaereDimensionerKonto"/>
-													<xs:element ref="oir:PrimaereDimensionerEjerforhold"/>
-													<xs:element ref="oir:PrimaereDimensionerOmkostningssted"/>
-													<xs:element ref="oir:PrimaereDimensionerArt"/>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
 										<xs:element name="SekundaereDimensioner" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
