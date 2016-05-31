@@ -22,7 +22,7 @@
 				<xs:element ref="oir:LeverancedataAfgivendeITSystem"/>
 				<xs:element ref="oir:DebitorKvitteringDebitorITSystem"/>
 				<xs:element ref="oir:DebitorKvitteringAntalKvitteringer"/>
-				<xs:element name="Debitorkvittering">
+				<xs:element name="LeveranceRegistreringValg">
 					<xs:complexType>
 						<xs:choice>
 							<xs:element name="LeveranceKvittering" maxOccurs="unbounded">
