@@ -6,8 +6,8 @@
 			<xsd:include schemaLocation="../view/HentDebitorkonto_O.xsd"/>
 			<xsd:include schemaLocation="../view/SogDelfordringTilIndbetaling_O.xsd"/>
 			<xsd:include schemaLocation="../view/SogDebitorRegistrering_O.xsd"/>
-			<xsd:include schemaLocation="../view/Forretningskvittering.xsd"/>
-			<xsd:include schemaLocation="../view/StraksleveranceTransportkvittering.xsd"/>
+			<xsd:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
+			<xsd:include schemaLocation="../view/DebitorStraksleveranceTransportkvittering.xsd"/>
 		</xsd:schema>
 	</wsdl:types>
 	<wsdl:message name="Opret">

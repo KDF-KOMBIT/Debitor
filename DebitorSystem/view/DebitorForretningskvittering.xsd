@@ -4,7 +4,7 @@
 	<xs:annotation>
 		<xs:documentation>ForretningsKvittering for en eller flere debitorregistreringer</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="../class/Kvittering.xsd"/>
+	<xs:include schemaLocation="../class/DebitorKvittering.xsd"/>
 	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
 	<xs:include schemaLocation="../class/Materialemodtager.xsd"/>
@@ -15,13 +15,13 @@
 	<xs:element name="Forretningskvittering">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:KvitteringTransaktionsID"/>
-				<xs:element ref="oir:KvitteringRegistreringstidspunkt"/>
+				<xs:element ref="oir:DebitorKvitteringTransaktionsID"/>
+				<xs:element ref="oir:DebitorKvitteringRegistreringstidspunkt"/>
 				<xs:element ref="oir:LeverancedataAfgivendeMyndighed"/>
 				<xs:element ref="oir:LeverancedataDebitoransvarligMyndighed"/>
 				<xs:element ref="oir:LeverancedataAfgivendeITSystem"/>
-				<xs:element ref="oir:KvitteringBogforingsITSystem"/>
-				<xs:element ref="oir:KvitteringAntalKvitteringer"/>
+				<xs:element ref="oir:DebitorKvitteringDebitorITSystem"/>
+				<xs:element ref="oir:DebitorKvitteringAntalKvitteringer"/>
 				<xs:element name="Debitorregistrering">
 					<xs:complexType>
 						<xs:sequence>
@@ -31,9 +31,9 @@
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
-										<xs:element ref="oir:KvitteringValideringstidspunkt"/>
-										<xs:element ref="oir:KvitteringResultat"/>
-										<xs:element ref="oir:KvitteringBegrundelse" minOccurs="0"/>
+										<xs:element ref="oir:DebitorKvitteringValideringstidspunkt"/>
+										<xs:element ref="oir:DebitorKvitteringResultat"/>
+										<xs:element ref="oir:DebitorKvitteringBegrundelse" minOccurs="0"/>
 										<xs:element name="FejlAarsag" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
@@ -70,12 +70,12 @@
 															</xs:choice>
 														</xs:complexType>
 													</xs:element>
-													<xs:element ref="oir:KvitteringAarsag"/>
+													<xs:element ref="oir:DebitorKvitteringAarsag"/>
 													<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:sequence>
-																<xs:element ref="oir:KvitteringFejlkode"/>
-																<xs:element ref="oir:KvitteringFejltekst" minOccurs="0"/>
+																<xs:element ref="oir:DebitorKvitteringFejlkode"/>
+																<xs:element ref="oir:DebitorKvitteringFejltekst" minOccurs="0"/>
 															</xs:sequence>
 														</xs:complexType>
 													</xs:element>

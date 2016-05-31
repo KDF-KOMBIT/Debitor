@@ -4,17 +4,17 @@
 	<xs:annotation>
 		<xs:documentation>Transportkvittering for en debitor volumenleverance</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="../class/Kvittering.xsd"/>
+	<xs:include schemaLocation="../class/DebitorKvittering.xsd"/>
 	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
 	<xs:element name="VolumenleveranceTransportkvittering">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="oir:LeverancedataTransaktionsID"/>
 				<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
-				<xs:element ref="oir:KvitteringBatchTransportResultat"/>
-				<xs:element ref="oir:KvitteringDebitorITSystem"/>
-				<xs:element ref="oir:KvitteringBegrundelse" minOccurs="0"/>
-				<xs:element ref="oir:KvitteringAarsag" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="oir:DebitorKvitteringBatchTransportResultat"/>
+				<xs:element ref="oir:DebitorKvitteringDebitorITSystem"/>
+				<xs:element ref="oir:DebitorKvitteringBegrundelse" minOccurs="0"/>
+				<xs:element ref="oir:DebitorKvitteringAarsag" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
