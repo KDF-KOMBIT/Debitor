@@ -4,22 +4,22 @@
 	<xs:annotation>
 		<xs:documentation>SogDebitorRegistrering_I</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
+	<xs:include schemaLocation="../class/DebitorLeverancedata.xsd"/>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
 	<xs:include schemaLocation="../class/Fordring.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
 	<xs:element name="SogDebitorRegistrering">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:LeverancedataAfgivendeMyndighed"/>
-				<xs:element ref="oir:LeverancedataDebitoransvarligMyndighed"/>
-				<xs:element ref="oir:LeverancedataAfgivendeITSystem" minOccurs="0"/>
-				<xs:element ref="oir:LeverancedataTransaktionsID"/>
-				<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
+				<xs:element ref="oir:DebitorLeverancedataAfgivendeMyndighed"/>
+				<xs:element ref="oir:DebitorLeverancedataDebitoransvarligMyndighed"/>
+				<xs:element ref="oir:DebitorLeverancedataAfgivendeITSystem" minOccurs="0"/>
+				<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
+				<xs:element ref="oir:DebitorLeverancedataRegistreringstidspunkt"/>
 				<xs:element name="DebitorRegistreringSog">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element ref="oir:LeverancedataAfgivendeITSystem" minOccurs="0"/>
+							<xs:element ref="oir:DebitorLeverancedataAfgivendeITSystem" minOccurs="0"/>
 							<xs:element ref="oir:DebitorkontoType" maxOccurs="unbounded"/>
 							<xs:element name="DebitorkontoPeriode" minOccurs="0">
 								<xs:complexType>

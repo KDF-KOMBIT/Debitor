@@ -4,7 +4,6 @@
 	<xs:annotation>
 		<xs:documentation>HentDebitorkonto_O</xs:documentation>
 	</xs:annotation>
-	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
 	<xs:include schemaLocation="../class/DebitorSpecifikation.xsd"/>
 	<xs:include schemaLocation="../class/Materialemodtager.xsd"/>

@@ -5,12 +5,12 @@
 		<xs:documentation>Transportkvittering for en debitor volumenleverance</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/DebitorKvittering.xsd"/>
-	<xs:include schemaLocation="../class/Leverancedata.xsd"/>
+	<xs:include schemaLocation="../class/DebitorLeverancedata.xsd"/>
 	<xs:element name="VolumenleveranceTransportkvittering">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:LeverancedataTransaktionsID"/>
-				<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
+				<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
+				<xs:element ref="oir:DebitorLeverancedataRegistreringstidspunkt"/>
 				<xs:element ref="oir:DebitorKvitteringBatchTransportResultat"/>
 				<xs:element ref="oir:DebitorKvitteringDebitorITSystem"/>
 				<xs:element ref="oir:DebitorKvitteringBegrundelse" minOccurs="0"/>
