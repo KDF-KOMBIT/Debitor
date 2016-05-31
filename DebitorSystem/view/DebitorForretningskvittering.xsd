@@ -24,52 +24,17 @@
 				<xs:element ref="oir:DebitorKvitteringAntalKvitteringer"/>
 				<xs:element name="Debitorregistrering">
 					<xs:complexType>
-						<xs:sequence>
-							<xs:element ref="oir:LeverancedataTransaktionsID"/>
-							<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
-							<xs:element name="DebitorkontoKvittering" maxOccurs="unbounded">
+						<xs:choice>
+							<xs:element name="LeveranceKvittering" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
+										<xs:element ref="oir:LeverancedataTransaktionsID"/>
 										<xs:element ref="oir:DebitorKvitteringValideringstidspunkt"/>
 										<xs:element ref="oir:DebitorKvitteringResultat"/>
-										<xs:element ref="oir:DebitorKvitteringBegrundelse" minOccurs="0"/>
-										<xs:element name="FejlAarsag" minOccurs="0" maxOccurs="unbounded">
+										<xs:element ref="oir:DebitorKvitteringBegrundelse"/>
+										<xs:element name="FejlAarsag" minOccurs="1" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="ObjektReference">
-														<xs:complexType>
-															<xs:choice>
-																<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
-																<xs:element name="JuridiskAnsvarlig">
-																	<xs:complexType>
-																		<xs:sequence>
-																			<xs:element ref="oir:JuridiskAnsvarligPartID"/>
-																			<xs:element ref="oir:JuridiskAnsvarligPartIDType"/>
-																		</xs:sequence>
-																	</xs:complexType>
-																</xs:element>
-																<xs:element name="Materialemodtager">
-																	<xs:complexType>
-																		<xs:sequence>
-																			<xs:element ref="oir:MaterialemodtagerPartID"/>
-																			<xs:element ref="oir:MaterialemodtagerPartIDType"/>
-																		</xs:sequence>
-																	</xs:complexType>
-																</xs:element>
-																<xs:element name="JuridiskMedhaefter">
-																	<xs:complexType>
-																		<xs:sequence>
-																			<xs:element ref="oir:JuridiskMedhaefterPartID"/>
-																			<xs:element ref="oir:JuridiskMedhaefterPartIDType"/>
-																		</xs:sequence>
-																	</xs:complexType>
-																</xs:element>
-																<xs:element ref="oir:FordringUnikIdentifikation"/>
-																<xs:element ref="oir:DelfordringUnikIdentifikation"/>
-															</xs:choice>
-														</xs:complexType>
-													</xs:element>
 													<xs:element ref="oir:DebitorKvitteringAarsag"/>
 													<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
 														<xs:complexType>
@@ -85,7 +50,73 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-						</xs:sequence>
+							<xs:element name="Debitorregistrering">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="oir:LeverancedataTransaktionsID"/>
+										<xs:element ref="oir:LeverancedataRegistreringstidspunkt"/>
+										<xs:element name="DebitorkontoKvittering" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
+													<xs:element ref="oir:DebitorKvitteringValideringstidspunkt"/>
+													<xs:element ref="oir:DebitorKvitteringResultat"/>
+													<xs:element ref="oir:DebitorKvitteringBegrundelse" minOccurs="0"/>
+													<xs:element name="FejlAarsag" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ObjektReference">
+																	<xs:complexType>
+																		<xs:choice>
+																			<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
+																			<xs:element name="JuridiskAnsvarlig">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element ref="oir:JuridiskAnsvarligPartID"/>
+																						<xs:element ref="oir:JuridiskAnsvarligPartIDType"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Materialemodtager">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element ref="oir:MaterialemodtagerPartID"/>
+																						<xs:element ref="oir:MaterialemodtagerPartIDType"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="JuridiskMedhaefter">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element ref="oir:JuridiskMedhaefterPartID"/>
+																						<xs:element ref="oir:JuridiskMedhaefterPartIDType"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element ref="oir:FordringUnikIdentifikation"/>
+																			<xs:element ref="oir:DelfordringUnikIdentifikation"/>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element ref="oir:DebitorKvitteringAarsag"/>
+																<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="oir:DebitorKvitteringFejlkode"/>
+																			<xs:element ref="oir:DebitorKvitteringFejltekst" minOccurs="0"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
