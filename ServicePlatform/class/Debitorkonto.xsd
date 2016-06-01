@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>Et debitorforhold beskriver et forhold hvor ejeren af forholdet (Kommunen/Losningen) har et krav mod en anden part (borger eller virksomhed). Kan f.eks. vaere tilbagebetaling af ydelser eller bodeforhold. Debitorkontoen oprettes af fagsystemet, og ejes herefter af debitorlosningen. Fagsystemet kan anmode om at faa lavet eventuelle aendringer. </xs:documentation>
 	</xs:annotation>

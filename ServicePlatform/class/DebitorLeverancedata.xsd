@@ -1,40 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>Data som er gaeldende for hele leverancen, bruges til kontrolelementer og myndighedsidentifikation.</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../types/UUIDType.xsd"/>
 	<xs:include schemaLocation="../types/BelobType.xsd"/>
-	<xs:element name="LeverancedataAntalDebitorkonto">
+	<xs:element name="DebitorLeverancedataAntalDebitorkonto">
 		<xs:annotation>
 			<xs:documentation>Antallet af debitorkonti i leverancen.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:integer"><xs:totalDigits value="4"/></xs:restriction>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="4"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataAntalFordring">
+	<xs:element name="DebitorLeverancedataAntalFordring">
 		<xs:annotation>
 			<xs:documentation>Antallet af fordringer i Leverancen.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:integer"><xs:totalDigits value="4"/></xs:restriction>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="4"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataAntalDelfordring">
+	<xs:element name="DebitorLeverancedataAntalDelfordring">
 		<xs:annotation>
 			<xs:documentation>Antallet af delfordringer i leverancen.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:integer"><xs:totalDigits value="4"/></xs:restriction>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="4"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataAfgivendeITSystem" type="xs:string">
+	<xs:element name="DebitorLeverancedataAfgivendeITSystem" type="xs:string">
 		<xs:annotation>
 			<xs:documentation>IT systemet som har skabt leverancen. Angivet som URN i organisation.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LeverancedataAfgivendeMyndighed">
+	<xs:element name="DebitorLeverancedataAfgivendeMyndighed">
 		<xs:annotation>
 			<xs:documentation>Myndighed som har dannet leverencen. Angivet som URN i organisation</xs:documentation>
 		</xs:annotation>
@@ -44,7 +50,7 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataDebitoransvarligMyndighed">
+	<xs:element name="DebitorLeverancedataDebitoransvarligMyndighed">
 		<xs:annotation>
 			<xs:documentation>Myndigheden som har det debitormaessige ansvar for leverancen. Angivet som URN i organisation.</xs:documentation>
 		</xs:annotation>
@@ -54,12 +60,12 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
-	<xs:element name="LeverancedataRegistreringstidspunkt" type="xs:dateTime">
+	<xs:element name="DebitorLeverancedataRegistreringstidspunkt" type="xs:dateTime">
 		<xs:annotation>
 			<xs:documentation>Tidsstempel for hvornaar leverancen er dannet.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="LeverancedataTransaktionsID" type="oir:UUIDType">
+	<xs:element name="DebitorLeverancedataTransaktionsID" type="oir:UUIDType">
 		<xs:annotation>
 			<xs:documentation>Unikt transsaktions ID for leverancen.</xs:documentation>
 		</xs:annotation>
