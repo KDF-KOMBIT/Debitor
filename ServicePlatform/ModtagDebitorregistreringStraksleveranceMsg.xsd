@@ -32,7 +32,7 @@
 	<xs:element name="OpretResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:Forretningskvittering"/>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -48,7 +48,7 @@
 	<xs:element name="AfslutHaeftelseResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:Forretningskvittering"/>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -64,7 +64,7 @@
 	<xs:element name="AfslutAlternativAdresseringResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:Forretningskvittering"/>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -80,7 +80,7 @@
 	<xs:element name="AfslutLigestillingspartnerResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:Forretningskvittering"/>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -96,7 +96,7 @@
 	<xs:element name="AfslutMaterialemodtagerResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:Forretningskvittering"/>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -112,7 +112,7 @@
 	<xs:element name="ForetagIndbetalingResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:Forretningskvittering"/>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -128,7 +128,7 @@
 	<xs:element name="RetTilstandResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:Forretningskvittering"/>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

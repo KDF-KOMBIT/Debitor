@@ -12,7 +12,7 @@
 	<xs:include schemaLocation="../class/Fordring.xsd"/>
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskMedhaefter.xsd"/>
-	<xs:element name="Forretningskvittering">
+	<xs:element name="DebitorForretningskvittering">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="oir:DebitorKvitteringTransaktionsID"/>
@@ -25,7 +25,7 @@
 				<xs:element name="LeveranceRegistreringValg">
 					<xs:complexType>
 						<xs:choice>
-							<xs:element name="LeveranceKvittering" maxOccurs="unbounded">
+							<xs:element name="DebitorLeveranceKvittering" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
