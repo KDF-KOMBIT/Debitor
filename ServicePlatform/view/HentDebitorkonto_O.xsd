@@ -212,8 +212,16 @@
 										<xs:element name="Indbetaling" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
+													<xs:element ref="oir:IndbetalingUnikIdentifikation"/>
 													<xs:element ref="oir:IndbetalingRegistreringsdato"/>
 													<xs:element ref="oir:DaekningBelob"/>
+													<xs:element name="ErReguleringTil" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:IndbetalingUnikIdentifikation"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>

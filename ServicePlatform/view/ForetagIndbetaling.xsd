@@ -28,11 +28,19 @@
 				<xs:element name="Indbetaling">
 					<xs:complexType>
 						<xs:sequence>
+							<xs:element ref="oir:IndbetalingUnikIdentifikation"/>
 							<xs:element ref="oir:IndbetalingRegistreringsdato"/>
 							<xs:element ref="oir:IndbetalingBetalingsdato"/>
 							<xs:element ref="oir:IndbetalingMyndighed"/>
 							<xs:element ref="oir:IndbetalingOrganisatoriskReference"/>
 							<xs:element ref="oir:IndbetalingOprettetAfITSystem"/>
+							<xs:element name="ErReguleringTil" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="oir:IndbetalingUnikIdentifikation"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
 							<xs:element name="Konteringsdimensioner">
 								<xs:complexType>
 									<xs:sequence>
