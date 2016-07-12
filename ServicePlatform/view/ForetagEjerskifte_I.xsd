@@ -16,13 +16,10 @@
 				<xs:element ref="oir:DebitorLeverancedataAfgivendeITSystem"/>
 				<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
 				<xs:element ref="oir:DebitorLeverancedataRegistreringstidspunkt"/>
-				<xs:element ref="oir:DebitorLeverancedataAntalDebitorkonto"/>
-				<xs:element ref="oir:DebitorLeverancedataAntalFordring"/>
-				<xs:element ref="oir:DebitorLeverancedataAntalDelfordring"/>
 				<xs:element name="ObjektIdentifikation" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="Debitorkonto" maxOccurs="unbounded">
+							<xs:element name="Debitorkonto">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
