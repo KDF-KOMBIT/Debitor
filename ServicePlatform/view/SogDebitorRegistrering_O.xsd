@@ -8,27 +8,35 @@
 	<xs:include schemaLocation="../class/Fordring.xsd"/>
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
-	<xs:element name="SogDebitorRegistreringResultat">
+	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
+	<xs:element name="KvitteringDataValg">
 		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Debitorkonto" minOccurs="0" maxOccurs="unbounded">
+			<xs:choice>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
+				<xs:element name="SogDebitorRegistreringResultat">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
-							<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
-							<xs:element ref="oir:DebitorkontoType"/>
-							<xs:element ref="oir:JuridiskAnsvarligPartID"/>
-							<xs:element ref="oir:JuridiskAnsvarligPartIDType"/>
-							<xs:element name="Fordring" maxOccurs="unbounded" minOccurs="0">
+							<xs:element name="Debitorkonto" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element ref="oir:FordringUnikIdentifikation"/>
-										<xs:element ref="oir:FordringOpkraevningStatus"/>
-										<xs:element name="Delfordring" maxOccurs="unbounded" minOccurs="0">
+										<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
+										<xs:element ref="oir:DebitorkontoDebitorkontoIdentifikation"/>
+										<xs:element ref="oir:DebitorkontoType"/>
+										<xs:element ref="oir:JuridiskAnsvarligPartID"/>
+										<xs:element ref="oir:JuridiskAnsvarligPartIDType"/>
+										<xs:element name="Fordring" minOccurs="0" maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element ref="oir:DelfordringUnikIdentifikation"/>
-													<xs:element ref="oir:DelfordringType"/>
+													<xs:element ref="oir:FordringUnikIdentifikation"/>
+													<xs:element ref="oir:FordringOpkraevningStatus"/>
+													<xs:element name="Delfordring" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:DelfordringUnikIdentifikation"/>
+																<xs:element ref="oir:DelfordringType"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
@@ -38,7 +46,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-			</xs:sequence>
+			</xs:choice>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>
