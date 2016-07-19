@@ -10,7 +10,7 @@
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
 	<xs:include schemaLocation="../class/SekundaereDimensioner.xsd"/>
 	<xs:include schemaLocation="../class/Valuta.xsd"/>
-	<xs:element name="ForetagIndbetaling">
+	<xs:element name="HentIndbetaling_O">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="oir:DebitorLeverancedataAfgivendeMyndighed"/>
