@@ -10,7 +10,7 @@
 	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
 	<xs:include schemaLocation="../class/TransienteElementer.xsd"/>
 	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
-	<xs:element name="KvitteringDataValg">
+	<xs:element name="KvitteringIndbetalingResultatValg">
 		<xs:complexType>
 			<xs:choice>
 				<xs:element ref="oir:DebitorForretningskvittering"/>

@@ -31,7 +31,7 @@
 	<xs:include schemaLocation="../class/Daekning.xsd"/>
 	<xs:include schemaLocation="../types/AdresseStruktur.xsd"/>
 	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
-	<xs:element name="KvitteringDataValg">
+	<xs:element name="KvitteringDebitorkontoValg">
 		<xs:complexType>
 			<xs:choice>
 				<xs:element ref="oir:DebitorForretningskvittering"/>
@@ -170,7 +170,9 @@
 										<xs:element name="Opkraevningsoplysninger" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element ref="oir:OpkraevningsoplysningerBetalingsReference"/>
+													<xs:element ref="oir:OpkraevningsoplysningerBetalingsMaadeKode"/>
+													<xs:element ref="oir:OpkraevningsoplysningerBetalingsIdentifikationID"/>
+													<xs:element ref="oir:OpkraevningsoplysningerKreditorKontonummer"/>
 													<xs:element ref="oir:OpkraevningsoplysningerSidsteRettidigBetalingsdato"/>
 													<xs:element ref="oir:OpkraevningsoplysningerFakturaNummer"/>
 													<xs:element ref="oir:OpkraevningsoplysningerOrdreNummer"/>

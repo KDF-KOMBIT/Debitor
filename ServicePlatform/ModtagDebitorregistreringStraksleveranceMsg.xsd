@@ -144,7 +144,7 @@
 	<xs:element name="HentDebitorkontoResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:HentetDebitorkonto"/>
+				<xs:element ref="oir:KvitteringDebitorkontoValg"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -160,7 +160,7 @@
 	<xs:element name="SogDelfordringTilIndbetalingResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:SogIndbetalingResultat"/>
+				<xs:element ref="oir:KvitteringIndbetalingResultatValg"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -176,7 +176,7 @@
 	<xs:element name="SogDebitorRegistreringResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:SogDebitorRegistreringResultat"/>
+				<xs:element ref="oir:KvitteringRegistreringResultatValg"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
