@@ -179,7 +179,9 @@
 													<xs:element name="Opkraevningsoplysninger" minOccurs="0">
 														<xs:complexType>
 															<xs:sequence>
-																<xs:element ref="oir:OpkraevningsoplysningerBetalingsReference"/>
+																<xs:element ref="oir:OpkraevningsoplysningerBetalingsMaadeKode"/>
+																<xs:element ref="oir:OpkraevningsoplysningerBetalingsIdentifikationID"/>
+																<xs:element ref="oir:OpkraevningsoplysningerKreditorKontonummer"/>
 																<xs:element ref="oir:OpkraevningsoplysningerSidsteRettidigBetalingsdato"/>
 																<xs:element ref="oir:OpkraevningsoplysningerFakturaNummer"/>
 																<xs:element ref="oir:OpkraevningsoplysningerOrdreNummer" minOccurs="0"/>
