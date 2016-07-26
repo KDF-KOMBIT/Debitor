@@ -20,6 +20,11 @@
 	<xs:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/HentDebitorkonto_O.xsd"/>
 	<xs:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/SogDelfordringTilIndbetaling_O.xsd"/>
 	<xs:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/SogDebitorRegistrering_O.xsd"/>
+	<xs:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/ForetagEjerskifte.xsd"/>
+	<xs:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/HentBSTilmeldingsstatus_I.xsd"/>
+	<xs:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/HentBSTilmeldingsstatus_O.xsd"/>
+	<xs:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/HentIndbetaling_I.xsd"/>
+	<xs:import namespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" schemaLocation="view/HentIndbetaling_O.xsd"/>
 	<xs:element name="OpretRequestType">
 		<xs:complexType>
 			<xs:sequence>
@@ -177,6 +182,54 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="oir:KvitteringRegistreringResultatValg"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ForetagEjerskifteRequestType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:Ejerskifte"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ForetagEjerskifteResponseType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="oir:DebitorForretningskvittering"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HentBSTilmeldningsstatusRequestType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:HentBSTilmeldingsstatus"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HentBSTilmeldningsstatusResponseType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="oir:KvitteringTilmeldingsstatusValg"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HentIndbetalingRequestType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:HentIndbetaling"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HentIndbetalingResponseType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="oir:KvitteringIndbetalingValg"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

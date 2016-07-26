@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
 	<xs:annotation>
-		<xs:documentation>Foretag indbetaling</xs:documentation>
+		<xs:documentation>HentIndbetaling_O</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/DebitorLeverancedata.xsd"/>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
@@ -10,7 +10,7 @@
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
 	<xs:include schemaLocation="../class/Valuta.xsd"/>
 	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
-	<xs:element name="KvitteringDataValg">
+	<xs:element name="KvitteringIndbetalingValg">
 		<xs:complexType>
 			<xs:choice>
 				<xs:element ref="oir:DebitorForretningskvittering"/>

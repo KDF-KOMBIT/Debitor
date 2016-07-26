@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions 
-		xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" 
-		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
-		xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
-		xmlns:wsp="http://www.w3.org/ns/ws-policy" 
-		xmlns:tns="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/ModtagDebitorregistreringStraksleverance/1/" 
-		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"  
-		xmlns:wsa="http://www.w3.org/2005/08/addressing"  
-		xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"
-		targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/ModtagDebitorregistreringStraksleverance/1/"
-		name="ModtagDebitorregistreringStraksleveranceService"
-		>
+<wsdl:definitions xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:tns="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/ModtagDebitorregistreringStraksleverance/1/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" name="ModtagDebitorregistreringStraksleveranceService" targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/ModtagDebitorregistreringStraksleverance/1/">
 	<wsdl:types>
 		<xsd:schema targetNamespace="http://serviceplatformen.dk/xml/wsdl/soap11/OIR/ModtagDebitorregistreringStraksleverance/1/">
 			<xsd:include schemaLocation="ModtagDebitorregistreringStraksleveranceMsg.xsd"/>
@@ -33,71 +21,75 @@
 	<wsdl:message name="AfslutAlternativAdresseringResponseMessage">
 		<wsdl:part name="parameters" element="tns:AfslutAlternativAdresseringResponseType"/>
 	</wsdl:message>
-
 	<wsdl:message name="AfslutHaeftelseRequestMessage">
 		<wsdl:part name="parameters" element="tns:AfslutHaeftelseRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="AfslutHaeftelseResponseMessage">
 		<wsdl:part name="parameters" element="tns:AfslutHaeftelseResponseType"/>
 	</wsdl:message>
-
 	<wsdl:message name="ForetagIndbetalingRequestMessage">
 		<wsdl:part name="parameters" element="tns:ForetagIndbetalingRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="ForetagIndbetalingResponseMessage">
 		<wsdl:part name="parameters" element="tns:ForetagIndbetalingResponseType"/>
 	</wsdl:message>
-
 	<wsdl:message name="AfslutMaterialeModtagerRequestMessage">
 		<wsdl:part name="parameters" element="tns:AfslutMaterialemodtagerRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="AfslutMaterialeModtagerResponseMessage">
 		<wsdl:part name="parameters" element="tns:AfslutMaterialemodtagerResponseType"/>
 	</wsdl:message>
-
 	<wsdl:message name="AfslutLigestillingspartnerRequestMessage">
 		<wsdl:part name="parameters" element="tns:AfslutLigestillingspartnerRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="AfslutLigestillingspartnerResponseMessage">
 		<wsdl:part name="parameters" element="tns:AfslutLigestillingspartnerResponseType"/>
 	</wsdl:message>
-
 	<wsdl:message name="RetTilstandRequestMessage">
 		<wsdl:part name="parameters" element="tns:RetTilstandRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="RetTilstandResponseMessage">
 		<wsdl:part name="parameters" element="tns:RetTilstandResponseType"/>
 	</wsdl:message>
-
-
 	<wsdl:message name="HentDebitorkontoRequestMessage">
 		<wsdl:part name="parameters" element="tns:HentDebitorkontoRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="HentDebitorkontoResponseMessage">
 		<wsdl:part name="parameters" element="tns:HentDebitorkontoResponseType"/>
 	</wsdl:message>
-
-
 	<wsdl:message name="SogDelfordringTilIndbetalingRequestMessage">
 		<wsdl:part name="parameters" element="tns:SogDelfordringTilIndbetalingRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="SogDelfordringTilIndbetalingResponseMessage">
 		<wsdl:part name="parameters" element="tns:SogDelfordringTilIndbetalingResponseType"/>
 	</wsdl:message>
-
-
 	<wsdl:message name="SogDebitorRegistreringRequestMessage">
 		<wsdl:part name="parameters" element="tns:SogDebitorRegistreringRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="SogDebitorRegistreringResponseMessage">
 		<wsdl:part name="parameters" element="tns:SogDebitorRegistreringResponseType"/>
 	</wsdl:message>
-	
-
+	<wsdl:message name="ForetagEjerskifteRequestMessage">
+		<wsdl:part name="parameters" element="tns:ForetagEjerskifteRequestType"/>
+	</wsdl:message>
+	<wsdl:message name="ForetagEjerskifteResponseMessage">
+		<wsdl:part name="parameters" element="tns:ForetagEjerskifteResponseType"/>
+	</wsdl:message>
+	<wsdl:message name="HentBSTilmeldningsstatusRequestMessage">
+		<wsdl:part name="parameters" element="tns:HentBSTilmeldningsstatusRequestType"/>
+	</wsdl:message>
+	<wsdl:message name="HentBSTilmeldningsstatusResponseMessage">
+		<wsdl:part name="parameters" element="tns:HentBSTilmeldningsstatusResponseType"/>
+	</wsdl:message>
+	<wsdl:message name="HentIndbetalingRequestMessage">
+		<wsdl:part name="parameters" element="tns:HentIndbetalingRequestType"/>
+	</wsdl:message>
+	<wsdl:message name="HentIndbetalingResponseMessage">
+		<wsdl:part name="parameters" element="tns:HentIndbetalingResponseType"/>
+	</wsdl:message>
 	<wsdl:message name="StraksleveranceTransportkvittering">
 		<wsdl:part name="parameters" element="oir:StraksleveranceTransportkvittering"/>
 	</wsdl:message>
-
 	<wsdl:portType name="ModtagDebitorregistreringStraksleveranceServicePort">
 		<wsdl:operation name="Opret">
 			<wsdl:input message="tns:OpretRequestMessage"/>
@@ -149,6 +141,21 @@
 			<wsdl:output message="tns:SogDebitorRegistreringResponseMessage"/>
 			<wsdl:fault name="StraksleveranceTransportkvittering" message="tns:StraksleveranceTransportkvittering"/>
 		</wsdl:operation>
+		<wsdl:operation name="ForetagEjerskifte">
+			<wsdl:input message="tns:ForetagEjerskifteRequestMessage"/>
+			<wsdl:output message="tns:ForetagEjerskifteResponseMessage"/>
+			<wsdl:fault name="StraksleveranceTransportkvittering" message="tns:StraksleveranceTransportkvittering"/>
+		</wsdl:operation>
+		<wsdl:operation name="HentBSTilmeldningsstatus">
+			<wsdl:input message="tns:HentBSTilmeldningsstatusRequestMessage"/>
+			<wsdl:output message="tns:HentBSTilmeldningsstatusResponseMessage"/>
+			<wsdl:fault name="StraksleveranceTransportkvittering" message="tns:StraksleveranceTransportkvittering"/>
+		</wsdl:operation>
+		<wsdl:operation name="HentIndbetaling">
+			<wsdl:input message="tns:HentIndbetalingRequestMessage"/>
+			<wsdl:output message="tns:HentIndbetalingResponseMessage"/>
+			<wsdl:fault name="StraksleveranceTransportkvittering" message="tns:StraksleveranceTransportkvittering"/>
+		</wsdl:operation>
 	</wsdl:portType>
 	<wsdl:binding name="ModtagDebitorregistreringStraksleveranceServiceBinding" type="tns:ModtagDebitorregistreringStraksleveranceServicePort">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -156,7 +163,7 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -170,7 +177,7 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -184,7 +191,7 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -198,7 +205,7 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -226,7 +233,7 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -240,7 +247,7 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -254,7 +261,7 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -268,7 +275,7 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -282,7 +289,49 @@
 			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
+				<wsp:PolicyReference URI="#Input_Policy"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="StraksleveranceTransportkvittering">
+				<soap:fault name="StraksleveranceTransportkvittering" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ForetagEjerskifte">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<!-- input policy reference -->
+				<wsp:PolicyReference URI="#Input_Policy"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="StraksleveranceTransportkvittering">
+				<soap:fault name="StraksleveranceTransportkvittering" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="HentBSTilmeldningsstatus">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<!-- input policy reference -->
+				<wsp:PolicyReference URI="#Input_Policy"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="StraksleveranceTransportkvittering">
+				<soap:fault name="StraksleveranceTransportkvittering" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="HentIndbetaling">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<!-- input policy reference -->
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -293,7 +342,12 @@
 			</wsdl:fault>
 		</wsdl:operation>
 	</wsdl:binding>
-	
+	<wsdl:service name="ModtagDebitorregistreringStraksleveranceService">
+		<wsdl:port name="ModtagDebitorregistreringStraksleveranceServicePort" binding="tns:ModtagDebitorregistreringStraksleveranceServiceBinding">
+			<soap:address location="http://localhost:8080/service/OiRDebitor/1"/>
+			<wsp:PolicyReference URI="#TLS_policy"/>
+		</wsdl:port>
+	</wsdl:service>
 	<wsp:Policy wsu:Id="STS_SAML_Token_policy_optional">
 		<sp:SignedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
 			<wsp:Policy wsp:Optional="true">
@@ -310,7 +364,7 @@
 					</wsp:Policy>
 				</sp:IssuedToken>
 				<sp:IncludeTimestamp/>
-				<sp:ProtectTokens />
+				<sp:ProtectTokens/>
 				<sp:OnlySignEntireHeadersAndBody/>
 			</wsp:Policy>
 		</sp:SignedSupportingTokens>
@@ -332,9 +386,7 @@
 			</wsp:Policy>
 		</sp:TransportBinding>
 	</wsp:Policy>
-
-	
-		<!-- Input policy for signing input -->
+	<!-- Input policy for signing input -->
 	<wsp:Policy wsu:Id="Input_Policy">
 		<wsp:ExactlyOne>
 			<wsp:All>
@@ -348,13 +400,6 @@
 			</wsp:All>
 		</wsp:ExactlyOne>
 	</wsp:Policy>
-	
-	<wsdl:service name="ModtagDebitorregistreringStraksleveranceService">
-		<wsdl:port name="ModtagDebitorregistreringStraksleveranceServicePort" binding="tns:ModtagDebitorregistreringStraksleveranceServiceBinding">
-			<soap:address location="http://localhost:8080/service/OiRDebitor/1"/>
-		    <wsp:PolicyReference URI="#TLS_policy"/>
-		</wsdl:port>
-	</wsdl:service>
 	<xsd:annotation>
 		<xsd:documentation xml:lang="en">
 			Version 1.0 of the API for the ModtagDebitorregistreringStraksleveranceService

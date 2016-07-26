@@ -6,7 +6,7 @@
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
 	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
-	<xs:element name="KvitteringDataValg">
+	<xs:element name="KvitteringTilmeldingsstatusValg">
 		<xs:complexType>
 			<xs:choice>
 				<xs:element ref="oir:DebitorForretningskvittering"/>
