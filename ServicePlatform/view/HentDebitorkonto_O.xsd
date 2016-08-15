@@ -131,7 +131,7 @@
 									<xs:sequence>
 										<xs:element ref="oir:LigestillingspartnerNavn"/>
 										<xs:element ref="oir:LigestillingspartnerOprettelseDato"/>
-										<xs:element ref="oir:LigestillingspartnerAfsluttetDato"/>
+										<xs:element ref="oir:LigestillingspartnerAfsluttetDato" minOccurs="0"/>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
