@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Eskild Nejsum (KOMBIT A/S) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V3" targetNamespace="urn:oio:kl:kdi:oir:1590_B_V3" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>En indbetaling knyttes til debitorforholdet, og benyttes til helt eller delvist at betale et eller flere krav.En indbetaling ejes af den indbetalende losning, som kan vaere debitorlosningen selv, den ansvarlig losning for debitorforholdet eller en helt tredje losning. Det er alene den indbetalende losning, som kan ajourfore en indbetaling.</xs:documentation>
 	</xs:annotation>

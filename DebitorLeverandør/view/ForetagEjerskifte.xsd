@@ -2,45 +2,53 @@
 <!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Eskild Nejsum (KOMBIT A/S) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V3" targetNamespace="urn:oio:kl:kdi:oir:1590_B_V3" elementFormDefault="qualified">
 	<xs:annotation>
-		<xs:documentation>SogDelfordringTilIndbetaling_O</xs:documentation>
+		<xs:documentation>DebitorkontoOpret</xs:documentation>
 	</xs:annotation>
+	<xs:include schemaLocation="../class/DebitorLeverancedata.xsd"/>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
 	<xs:include schemaLocation="../class/Fordring.xsd"/>
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
-	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
-	<xs:include schemaLocation="../class/TransienteElementer.xsd"/>
-	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
-	<xs:element name="KvitteringIndbetalingResultatValg">
+	<xs:element name="Ejerskifte">
 		<xs:complexType>
-			<xs:choice>
-				<xs:element ref="oir:DebitorForretningskvittering"/>
-				<xs:element name="SogIndbetalingResultat">
+			<xs:sequence>
+				<xs:element ref="oir:DebitorLeverancedataAfgivendeMyndighed"/>
+				<xs:element ref="oir:DebitorLeverancedataDebitoransvarligMyndighed"/>
+				<xs:element ref="oir:DebitorLeverancedataAfgivendeITSystem"/>
+				<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
+				<xs:element ref="oir:DebitorLeverancedataRegistreringstidspunkt"/>
+				<xs:element name="ObjektIdentifikation" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="JuridiskAnsvarlig" maxOccurs="unbounded">
+							<xs:element name="Debitorkonto">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element ref="oir:JuridiskAnsvarligPartID"/>
-										<xs:element ref="oir:JuridiskAnsvarligPartIDType"/>
-										<xs:element name="Debitorkonto" minOccurs="0" maxOccurs="unbounded">
+										<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
+										<xs:element name="NyDebitorkonto">
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
-													<xs:element ref="oir:DebitorkontoType"/>
-													<xs:element ref="oir:DebitorkontoFolsomhed"/>
-													<xs:element name="Fordring" maxOccurs="unbounded">
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Fordring" minOccurs="1" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:FordringUnikIdentifikation"/>
+													<xs:element name="NyFordring">
 														<xs:complexType>
 															<xs:sequence>
 																<xs:element ref="oir:FordringUnikIdentifikation"/>
-																<xs:element ref="oir:FordringForfaldsdato"/>
-																<xs:element name="Delfordring" maxOccurs="unbounded">
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Delfordring" minOccurs="1" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:DelfordringUnikIdentifikation"/>
+																<xs:element name="NyDelfordring">
 																	<xs:complexType>
 																		<xs:sequence>
 																			<xs:element ref="oir:DelfordringUnikIdentifikation"/>
-																			<xs:element ref="oir:DelfordringType"/>
-																			<xs:element ref="oir:DelfordringFolsomhed"/>
-																			<xs:element ref="oir:DelfordringBelob"/>
-																			<xs:element ref="oir:RestanceBelob"/>
 																		</xs:sequence>
 																	</xs:complexType>
 																</xs:element>
@@ -56,7 +64,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-			</xs:choice>
+			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>
