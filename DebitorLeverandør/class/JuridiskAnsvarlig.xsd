@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" targetNamespace="http://oir.kombit.dk/xml/wsdl/soap11/OIR/OIR/1/" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V2" targetNamespace="urn:oio:kl:kdi:oir:1590_B_V2" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>JuridiskAnsvarlig er den person eller virksomhed som har det juridiske ansvar for betalingen af debitorforholdet. Vil oftest vaere den samme som Debitor. Et eksempel hvor den vil anderledes er ved ejendomskat hvor debitorkravet er tilknyttet ejendommen og ikke personen.</xs:documentation>
 	</xs:annotation>
