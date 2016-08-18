@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions 
-		xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V2" 
+		xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V3" 
 		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
 		xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
@@ -8,11 +8,11 @@
 		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"  
 		xmlns:wsa="http://www.w3.org/2005/08/addressing"  
 		xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"
-		targetNamespace="urn:oio:kl:kdi:oir:1590_B_V2"
+		targetNamespace="urn:oio:kl:kdi:oir:1590_B_V3"
 		name="ModtagDebitorregistreringStraksleveranceServiceAuth"
 		>
 	<wsdl:types>
-		<xsd:schema targetNamespace="urn:oio:kl:kdi:oir:1590_B_V2">
+		<xsd:schema targetNamespace="urn:oio:kl:kdi:oir:1590_B_V3">
 			<xsd:include schemaLocation="ModtagDebitorregistreringStraksleveranceMsg.xsd"/>
 			<xsd:include schemaLocation="./view/HentDebitorkonto_O.xsd"/>
 			<xsd:include schemaLocation="./view/SogDelfordringTilIndbetaling_O.xsd"/>
@@ -93,6 +93,26 @@
 		<wsdl:part name="parameters" element="oir:SogDebitorRegistreringResponseType"/>
 	</wsdl:message>
 	
+	<wsdl:message name="ForetagEjerskifteRequestMessage">
+		<wsdl:part name="parameters" element="oir:ForetagEjerskifteRequestAuthType"/>
+	</wsdl:message>
+	<wsdl:message name="ForetagEjerskifteResponseMessage">
+		<wsdl:part name="parameters" element="oir:ForetagEjerskifteResponseType"/>
+	</wsdl:message>
+	
+	<wsdl:message name="HentBSTilmeldningsstatusRequestMessage">
+		<wsdl:part name="parameters" element="oir:HentBSTilmeldningsstatusRequestAuthType"/>
+	</wsdl:message>
+	<wsdl:message name="HentBSTilmeldningsstatusResponseMessage">
+		<wsdl:part name="parameters" element="oir:HentBSTilmeldningsstatusResponseType"/>
+	</wsdl:message>
+	
+	<wsdl:message name="HentIndbetalingRequestMessage">
+		<wsdl:part name="parameters" element="oir:HentIndbetalingRequestAuthType"/>
+	</wsdl:message>
+	<wsdl:message name="HentIndbetalingResponseMessage">
+		<wsdl:part name="parameters" element="oir:HentIndbetalingResponseType"/>
+	</wsdl:message>
 
 	<wsdl:message name="StraksleveranceTransportkvittering">
 		<wsdl:part name="parameters" element="oir:StraksleveranceTransportkvittering"/>
@@ -147,6 +167,21 @@
 		<wsdl:operation name="SogDebitorRegistrering">
 			<wsdl:input message="oir:SogDebitorRegistreringRequestMessage"/>
 			<wsdl:output message="oir:SogDebitorRegistreringResponseMessage"/>
+			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
+		</wsdl:operation>
+		<wsdl:operation name="ForetagEjerskifte">
+			<wsdl:input message="oir:ForetagEjerskifteRequestMessage"/>
+			<wsdl:output message="oir:ForetagEjerskifteResponseMessage"/>
+			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
+		</wsdl:operation>
+		<wsdl:operation name="HentBSTilmeldningsstatus">
+			<wsdl:input message="oir:HentBSTilmeldningsstatusRequestMessage"/>
+			<wsdl:output message="oir:HentBSTilmeldningsstatusResponseMessage"/>
+			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
+		</wsdl:operation>
+		<wsdl:operation name="HentIndbetaling">
+			<wsdl:input message="oir:HentIndbetalingRequestMessage"/>
+			<wsdl:output message="oir:HentIndbetalingResponseMessage"/>
 			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
 		</wsdl:operation>
 	</wsdl:portType>
@@ -283,6 +318,48 @@
 			<wsdl:input>
 				<!-- input policy reference -->
 					<wsp:PolicyReference URI="#Input_Policy"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="StraksleveranceTransportkvittering">
+				<soap:fault name="StraksleveranceTransportkvittering" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ForetagEjerskifte">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<!-- input policy reference -->
+				<wsp:PolicyReference URI="#Input_Policy"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="StraksleveranceTransportkvittering">
+				<soap:fault name="StraksleveranceTransportkvittering" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="HentBSTilmeldningsstatus">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<!-- input policy reference -->
+				<wsp:PolicyReference URI="#Input_Policy"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="StraksleveranceTransportkvittering">
+				<soap:fault name="StraksleveranceTransportkvittering" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="HentIndbetaling">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<!-- input policy reference -->
+				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
