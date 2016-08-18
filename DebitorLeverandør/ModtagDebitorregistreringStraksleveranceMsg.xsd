@@ -25,10 +25,34 @@
 	<xs:import namespace="urn:oio:kl:kdi:oir:1590_B_V3" schemaLocation="view/HentBSTilmeldingsstatus_O.xsd"/>
 	<xs:import namespace="urn:oio:kl:kdi:oir:1590_B_V3" schemaLocation="view/HentIndbetaling_I.xsd"/>
 	<xs:import namespace="urn:oio:kl:kdi:oir:1590_B_V3" schemaLocation="view/HentIndbetaling_O.xsd"/>
+=======
+	<xs:include schemaLocation="view/Opret.xsd"/>
+	<xs:include schemaLocation="view/AfslutHaeftelse.xsd"/>
+	<xs:include schemaLocation="view/AfslutAlternativAdressering.xsd"/>
+	<xs:include schemaLocation="view/AfslutLigestillingspartner.xsd"/>
+	<xs:include schemaLocation="view/AfslutMaterialemodtagelse.xsd"/>
+	<xs:include schemaLocation="view/ForetagIndbetaling.xsd"/>
+	<xs:include schemaLocation="view/RetTilstand.xsd"/>
+	<xs:include schemaLocation="view/HentDebitorkonto_I.xsd"/>
+	<xs:include schemaLocation="view/SogDelfordringTilIndbetaling_I.xsd"/>
+	<xs:include schemaLocation="view/SogDebitorRegistrering_I.xsd"/>
+	<xs:include schemaLocation="view/DebitorForretningskvittering.xsd"/>
+	<xs:include schemaLocation="view/HentDebitorkonto_O.xsd"/>
+	<xs:include schemaLocation="view/SogDelfordringTilIndbetaling_O.xsd"/>
+	<xs:include schemaLocation="view/SogDebitorRegistrering_O.xsd"/>
+>>>>>>> Version_2.7
 	<xs:element name="OpretRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:Opret"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OpretRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:Opret"/>
 			</xs:sequence>
@@ -44,7 +68,15 @@
 	<xs:element name="AfslutHaeftelseRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:AfslutHaeftelse"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AfslutHaeftelseRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:AfslutHaeftelse"/>
 			</xs:sequence>
@@ -60,7 +92,15 @@
 	<xs:element name="AfslutAlternativAdresseringRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:AfslutAlternativAdressering"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AfslutAlternativAdresseringRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:AfslutAlternativAdressering"/>
 			</xs:sequence>
@@ -76,7 +116,15 @@
 	<xs:element name="AfslutLigestillingspartnerRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:AfslutLigestillingspartner"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		<xs:element name="AfslutLigestillingspartnerRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:AfslutLigestillingspartner"/>
 			</xs:sequence>
@@ -92,7 +140,15 @@
 	<xs:element name="AfslutMaterialemodtagerRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:AfslutMaterialeModtager"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AfslutMaterialemodtagerRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:AfslutMaterialeModtager"/>
 			</xs:sequence>
@@ -108,7 +164,15 @@
 	<xs:element name="ForetagIndbetalingRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:ForetagIndbetaling"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ForetagIndbetalingRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:ForetagIndbetaling"/>
 			</xs:sequence>
@@ -124,7 +188,15 @@
 	<xs:element name="RetTilstandRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:RetTilstand"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RetTilstandRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:RetTilstand"/>
 			</xs:sequence>
@@ -140,7 +212,15 @@
 	<xs:element name="HentDebitorkontoRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:HentDebitorkonto"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		<xs:element name="HentDebitorkontoRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:HentDebitorkonto"/>
 			</xs:sequence>
@@ -156,7 +236,15 @@
 	<xs:element name="SogDelfordringTilIndbetalingRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:SogDelfordringTilIndbetaling"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SogDelfordringTilIndbetalingRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:SogDelfordringTilIndbetaling"/>
 			</xs:sequence>
@@ -172,7 +260,15 @@
 	<xs:element name="SogDebitorRegistreringRequestType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="autctx:AuthorityContext" minOccurs="0"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:SogDebitorRegistrering"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SogDebitorRegistreringRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
 				<xs:element ref="callctx:CallContext" minOccurs="0"/>
 				<xs:element ref="oir:SogDebitorRegistrering"/>
 			</xs:sequence>
