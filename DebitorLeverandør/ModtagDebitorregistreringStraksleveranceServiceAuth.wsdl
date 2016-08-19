@@ -6,7 +6,7 @@
 		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
 		xmlns:wsp="http://www.w3.org/ns/ws-policy"
 		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"  
-		xmlns:wsa="http://www.w3.org/2005/08/addressing"  
+		xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
 		xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"
 		targetNamespace="urn:oio:kl:kdi:oir:1590_B_V2"
 		name="ModtagDebitorregistreringStraksleveranceServiceAuth"
@@ -21,81 +21,81 @@
 		</xsd:schema>
 	</wsdl:types>
 	<wsdl:message name="OpretRequestMessage">
-		<wsdl:part name="parameters" element="oir:OpretRequestAuthType"/>
+		<wsdl:part name="request" element="oir:OpretRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="OpretResponseMessage">
-		<wsdl:part name="parameters" element="oir:OpretResponseType"/>
+		<wsdl:part name="response" element="oir:OpretResponseType"/>
 	</wsdl:message>
 	
 	<wsdl:message name="AfslutAlternativAdresseringRequestMessage">
-		<wsdl:part name="parameters" element="oir:AfslutAlternativAdresseringRequestAuthType"/>
+		<wsdl:part name="request" element="oir:AfslutAlternativAdresseringRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="AfslutAlternativAdresseringResponseMessage">
-		<wsdl:part name="parameters" element="oir:AfslutAlternativAdresseringResponseType"/>
+		<wsdl:part name="response" element="oir:AfslutAlternativAdresseringResponseType"/>
 	</wsdl:message>
 
 	<wsdl:message name="AfslutHaeftelseRequestMessage">
-		<wsdl:part name="parameters" element="oir:AfslutHaeftelseRequestAuthType"/>
+		<wsdl:part name="request" element="oir:AfslutHaeftelseRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="AfslutHaeftelseResponseMessage">
-		<wsdl:part name="parameters" element="oir:AfslutHaeftelseResponseType"/>
+		<wsdl:part name="response" element="oir:AfslutHaeftelseResponseType"/>
 	</wsdl:message>
 
 	<wsdl:message name="ForetagIndbetalingRequestMessage">
-		<wsdl:part name="parameters" element="oir:ForetagIndbetalingRequestAuthType"/>
+		<wsdl:part name="request" element="oir:ForetagIndbetalingRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="ForetagIndbetalingResponseMessage">
-		<wsdl:part name="parameters" element="oir:ForetagIndbetalingResponseType"/>
+		<wsdl:part name="response" element="oir:ForetagIndbetalingResponseType"/>
 	</wsdl:message>
 
 	<wsdl:message name="AfslutMaterialeModtagerRequestMessage">
-		<wsdl:part name="parameters" element="oir:AfslutMaterialemodtagerRequestAuthType"/>
+		<wsdl:part name="request" element="oir:AfslutMaterialemodtagerRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="AfslutMaterialeModtagerResponseMessage">
-		<wsdl:part name="parameters" element="oir:AfslutMaterialemodtagerResponseType"/>
+		<wsdl:part name="response" element="oir:AfslutMaterialemodtagerResponseType"/>
 	</wsdl:message>
 
 	<wsdl:message name="AfslutLigestillingspartnerRequestMessage">
-		<wsdl:part name="parameters" element="oir:AfslutLigestillingspartnerRequestAuthType"/>
+		<wsdl:part name="request" element="oir:AfslutLigestillingspartnerRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="AfslutLigestillingspartnerResponseMessage">
-		<wsdl:part name="parameters" element="oir:AfslutLigestillingspartnerResponseType"/>
+		<wsdl:part name="response" element="oir:AfslutLigestillingspartnerResponseType"/>
 	</wsdl:message>
 
 	<wsdl:message name="RetTilstandRequestMessage">
-		<wsdl:part name="parameters" element="oir:RetTilstandRequestAuthType"/>
+		<wsdl:part name="request" element="oir:RetTilstandRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="RetTilstandResponseMessage">
-		<wsdl:part name="parameters" element="oir:RetTilstandResponseType"/>
+		<wsdl:part name="response" element="oir:RetTilstandResponseType"/>
 	</wsdl:message>
 
 
 	<wsdl:message name="HentDebitorkontoRequestMessage">
-		<wsdl:part name="parameters" element="oir:HentDebitorkontoRequestAuthType"/>
+		<wsdl:part name="request" element="oir:HentDebitorkontoRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="HentDebitorkontoResponseMessage">
-		<wsdl:part name="parameters" element="oir:HentDebitorkontoResponseType"/>
+		<wsdl:part name="response" element="oir:HentDebitorkontoResponseType"/>
 	</wsdl:message>
 
 
 	<wsdl:message name="SogDelfordringTilIndbetalingRequestMessage">
-		<wsdl:part name="parameters" element="oir:SogDelfordringTilIndbetalingRequestAuthType"/>
+		<wsdl:part name="request" element="oir:SogDelfordringTilIndbetalingRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="SogDelfordringTilIndbetalingResponseMessage">
-		<wsdl:part name="parameters" element="oir:SogDelfordringTilIndbetalingResponseType"/>
+		<wsdl:part name="response" element="oir:SogDelfordringTilIndbetalingResponseType"/>
 	</wsdl:message>
 
 
 	<wsdl:message name="SogDebitorRegistreringRequestMessage">
-		<wsdl:part name="parameters" element="oir:SogDebitorRegistreringRequestAuthType"/>
+		<wsdl:part name="request" element="oir:SogDebitorRegistreringRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="SogDebitorRegistreringResponseMessage">
-		<wsdl:part name="parameters" element="oir:SogDebitorRegistreringResponseType"/>
+		<wsdl:part name="response" element="oir:SogDebitorRegistreringResponseType"/>
 	</wsdl:message>
 	
 
 	<wsdl:message name="StraksleveranceTransportkvittering">
-		<wsdl:part name="parameters" element="oir:StraksleveranceTransportkvittering"/>
+		<wsdl:part name="fault" element="oir:StraksleveranceTransportkvittering"/>
 	</wsdl:message>
 
 	<wsdl:portType name="ModtagDebitorregistreringStraksleveranceServiceAuthPort">
@@ -151,12 +151,11 @@
 		</wsdl:operation>
 	</wsdl:portType>
 	<wsdl:binding name="ModtagDebitorregistreringStraksleveranceServiceAuthBinding" type="oir:ModtagDebitorregistreringStraksleveranceServiceAuthPort">
-		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsp:PolicyReference URI="#TransportbindingPolicy"/>
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
 		<wsdl:operation name="Opret">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -169,8 +168,6 @@
 		<wsdl:operation name="AfslutAlternativAdressering">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -183,8 +180,6 @@
 		<wsdl:operation name="AfslutHaeftelse">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -197,8 +192,6 @@
 		<wsdl:operation name="ForetagIndbetaling">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -211,8 +204,6 @@
 		<wsdl:operation name="AfslutMaterialeModtager">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -225,8 +216,6 @@
 		<wsdl:operation name="AfslutLigestillingspartner">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -239,8 +228,6 @@
 		<wsdl:operation name="RetTilstand">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -253,8 +240,6 @@
 		<wsdl:operation name="HentDebitorkonto">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -267,8 +252,6 @@
 		<wsdl:operation name="SogDelfordringTilIndbetaling">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -281,8 +264,6 @@
 		<wsdl:operation name="SogDebitorRegistrering">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-					<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -294,67 +275,29 @@
 		</wsdl:operation>
 	</wsdl:binding>
 	
-	<wsp:Policy wsu:Id="STS_SAML_Token_policy_optional">
-		<sp:SignedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
-			<wsp:Policy wsp:Optional="true">
-				<sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
-					<!-- Nedenstående Issuer address er pt. ikke rigtig idet STS endpoint ikke kendt-->
-					<sp:Issuer>
-						<wsa:Address>https://url-til-sts</wsa:Address>
-					</sp:Issuer>
-					<sp:RequestSecurityTokenTemplate>
-						<trust:TokenType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">urn:oasis:names:tc:SAML:2.0:assertion</trust:TokenType>
-					</sp:RequestSecurityTokenTemplate>
-					<wsp:Policy>
-						<sp:RequireInternalReference/>
-					</wsp:Policy>
-				</sp:IssuedToken>
-				<sp:IncludeTimestamp/>
-				<sp:ProtectTokens />
-				<sp:OnlySignEntireHeadersAndBody/>
-			</wsp:Policy>
-		</sp:SignedSupportingTokens>
-	</wsp:Policy>
-	<!-- TLS policy for communicating with SP -->
-	<wsp:Policy wsu:Id="TLS_policy">
-		<sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
-			<wsp:Policy>
-				<sp:TransportToken>
-					<wsp:Policy>
-						<sp:HttpsToken RequireClientCertificate="true"/>
-					</wsp:Policy>
-				</sp:TransportToken>
-				<sp:AlgorithmSuite>
-					<wsp:Policy>
-						<sp:Basic128/>
-					</wsp:Policy>
-				</sp:AlgorithmSuite>
-			</wsp:Policy>
-		</sp:TransportBinding>
-	</wsp:Policy>
-
-	
-		<!-- Input policy for signing input -->
-	<wsp:Policy wsu:Id="Input_Policy">
-		<wsp:ExactlyOne>
-			<wsp:All>
-				<sp:SignedParts>
-					<sp:Body/>
-					<sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-					<sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-					<sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-					<sp:Header Name="Framework" Namespace="urn:liberty:sb"/>
-				</sp:SignedParts>
-			</wsp:All>
-		</wsp:ExactlyOne>
-	</wsp:Policy>
-	
 	<wsdl:service name="ModtagDebitorregistreringStraksleveranceServiceAuth">
 		<wsdl:port name="ModtagDebitorregistreringStraksleveranceServiceAuthPort" binding="oir:ModtagDebitorregistreringStraksleveranceServiceAuthBinding">
 			<soap:address location="http://localhost:8080/service/OiRDebitor/1"/>
-		    <wsp:PolicyReference URI="#TLS_policy"/>
 		</wsdl:port>
 	</wsdl:service>
+	
+	<wsp:Policy wsu:Id="TransportbindingPolicy">
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+            <wsp:Policy>
+                <sp:TransportToken>
+                    <wsp:Policy>
+                        <sp:HttpsToken RequireClientCertificate="true"/>
+                    </wsp:Policy>
+                </sp:TransportToken>
+                <sp:AlgorithmSuite>
+                    <wsp:Policy>
+                        <sp:Basic256/>
+                    </wsp:Policy>
+                </sp:AlgorithmSuite>
+            </wsp:Policy>
+        </sp:TransportBinding>
+    </wsp:Policy>
+	
 	<xsd:annotation>
 		<xsd:documentation xml:lang="en">
 			Version 1.0 of the API for the ModtagDebitorregistreringStraksleveranceServiceAuth
