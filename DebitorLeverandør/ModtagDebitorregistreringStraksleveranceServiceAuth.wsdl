@@ -98,7 +98,7 @@
 		<wsdl:part name="fault" element="oir:StraksleveranceTransportkvittering"/>
 	</wsdl:message>
 
-	<wsdl:portType name="ModtagDebitorregistreringStraksleveranceServiceAuthPort">
+	<wsdl:portType name="ModtagDebitorregistreringStraksleveranceServicePort">
 		<wsdl:operation name="Opret">
 			<wsdl:input message="oir:OpretRequestMessage"/>
 			<wsdl:output message="oir:OpretResponseMessage"/>
@@ -150,7 +150,7 @@
 			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
 		</wsdl:operation>
 	</wsdl:portType>
-	<wsdl:binding name="ModtagDebitorregistreringStraksleveranceServiceAuthBinding" type="oir:ModtagDebitorregistreringStraksleveranceServiceAuthPort">
+	<wsdl:binding name="ModtagDebitorregistreringStraksleveranceServiceBinding" type="oir:ModtagDebitorregistreringStraksleveranceServicePort">
 		<wsp:PolicyReference URI="#TransportbindingPolicy"/>
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
 		<wsdl:operation name="Opret">
@@ -275,8 +275,8 @@
 		</wsdl:operation>
 	</wsdl:binding>
 	
-	<wsdl:service name="ModtagDebitorregistreringStraksleveranceServiceAuth">
-		<wsdl:port name="ModtagDebitorregistreringStraksleveranceServiceAuthPort" binding="oir:ModtagDebitorregistreringStraksleveranceServiceAuthBinding">
+	<wsdl:service name="ModtagDebitorregistreringStraksleveranceService">
+		<wsdl:port name="ModtagDebitorregistreringStraksleveranceServicePort" binding="oir:ModtagDebitorregistreringStraksleveranceServiceBinding">
 			<soap:address location="http://localhost:8080/service/OiRDebitor/1"/>
 		</wsdl:port>
 	</wsdl:service>
