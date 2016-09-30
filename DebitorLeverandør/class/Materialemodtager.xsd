@@ -4,26 +4,16 @@
 		<xs:documentation>En materiale modtager er den part som paa vegne af den juridiske ansvarlige har ansvaret for betaling af debitorkontoen. Hvis den juridsiske ejer er en virksomhed kunne dette vaere f.eks vaere identifikation af okonomiafdelingen. For personer kunne det f.eks. vaere et advokatkontor hvis personen er sat under administration. Der kan paa ethvert givet tidspunkt kun vaere en Materialemodtager
 		</xs:documentation>
 	</xs:annotation>
-	<xs:element name="MaterialemodtagerPartID">
+	<xs:include schemaLocation="../types/UUIDType.xsd"/>
+	<xs:element name="MaterialemodtagerPartID" type="xs:string">
 		<xs:annotation>
-			<xs:documentation>Identifikation af parten. Angivet som URN. CVR vaere angivet som: urn:oio:cvr-nr:[0-9]{10}. CPR vil vaere angivet som urn:oio:cpr-nr:[0-9]{8}</xs:documentation>
+			<xs:documentation>Identifikation af parten. Format bestemt af PartIDTypen i klassifikation.</xs:documentation>
 		</xs:annotation>
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:pattern value="urn:oio:cvr-nr:[0-9]{10}|urn:oio:cpr-nr:[0-9]{8}"/>
-			</xs:restriction>
-		</xs:simpleType>
 	</xs:element>
-	<xs:element name="MaterialemodtagerPartIDType">
+	<xs:element name="MaterialemodtagerPartIDType" type="oir:UUIDType">
 		<xs:annotation>
-			<xs:documentation>Identificere typen af PartID. Kan vaere CPR, CVR.</xs:documentation>
+			<xs:documentation>Identificere typen af PartID. Angivet som UUID i Klassifikation</xs:documentation>
 		</xs:annotation>
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:enumeration value="CPR"/>
-				<xs:enumeration value="CVR"/>
-			</xs:restriction>
-		</xs:simpleType>
 	</xs:element>
 	<xs:element name="MaterialemodtagerProduktionsenhedNummer">
 		<xs:annotation>
@@ -31,7 +21,7 @@
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:pattern value="^urn:oio:pnr:[0-9]{10}$"/>
+				<xs:pattern value="urn:oio:pnr:[0-9]{10}"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -43,7 +33,7 @@ Indeholder også EAN.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:pattern value="^urn:oio:gln:[0-9]{13}$"/>
+				<xs:pattern value="urn:oio:gln:[0-9]{13}"/>
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>

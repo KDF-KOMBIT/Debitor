@@ -3,25 +3,15 @@
 	<xs:annotation>
 		<xs:documentation>En juridisk medhaefter er en person eller virksomhed som deler det okonomiske ansvar for en delfordring. Debitorkontoen vil have en juridisk medhaefter som saa kan haefte i forskellige perioder for forskellige delfordringer.</xs:documentation>
 	</xs:annotation>
-	<xs:element name="JuridiskMedhaefterPartID">
+	<xs:include schemaLocation="../types/UUIDType.xsd"/>
+	<xs:element name="JuridiskMedhaefterPartID" type="xs:string">
 		<xs:annotation>
-			<xs:documentation>Identifikation af parten. Angivet som URN. CVR vaere angivet som: urn:oio:cvr-nr:[0-9]{10}. CPR vil vaere angivet som urn:oio:cpr-nr:[0-9]{8}</xs:documentation>
+			<xs:documentation>Identifikation af parten. Identifikation af parten. Format bestemt af PartIDTypen i klassifikation.</xs:documentation>
 		</xs:annotation>
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:pattern value="urn:oio:cvr-nr:[0-9]{10}|urn:oio:cpr-nr:[0-9]{8}"/>
-			</xs:restriction>
-		</xs:simpleType>
 	</xs:element>
-	<xs:element name="JuridiskMedhaefterPartIDType">
+	<xs:element name="JuridiskMedhaefterPartIDType" type="oir:UUIDType">
 		<xs:annotation>
-			<xs:documentation>Identificere typen af PartID. Kan vaere CPR, CVR.</xs:documentation>
+			<xs:documentation>Identificere typen af PartID. Angivet som UUID i Klassifikation</xs:documentation>
 		</xs:annotation>
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:enumeration value="CPR"/>
-				<xs:enumeration value="CVR"/>
-			</xs:restriction>
-		</xs:simpleType>
 	</xs:element>
 </xs:schema>
