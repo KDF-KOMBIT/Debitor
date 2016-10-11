@@ -94,24 +94,24 @@
 	</wsdl:message>
 	
 	<wsdl:message name="ForetagEjerskifteRequestMessage">
-		<wsdl:part name="parameters" element="oir:ForetagEjerskifteRequestAuthType"/>
+		<wsdl:part name="request" element="oir:ForetagEjerskifteRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="ForetagEjerskifteResponseMessage">
-		<wsdl:part name="parameters" element="oir:ForetagEjerskifteResponseType"/>
+		<wsdl:part name="response" element="oir:ForetagEjerskifteResponseType"/>
 	</wsdl:message>
 	
 	<wsdl:message name="HentBSTilmeldningsstatusRequestMessage">
-		<wsdl:part name="parameters" element="oir:HentBSTilmeldningsstatusRequestAuthType"/>
+		<wsdl:part name="request" element="oir:HentBSTilmeldningsstatusRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="HentBSTilmeldningsstatusResponseMessage">
-		<wsdl:part name="parameters" element="oir:HentBSTilmeldningsstatusResponseType"/>
+		<wsdl:part name="response" element="oir:HentBSTilmeldningsstatusResponseType"/>
 	</wsdl:message>
 	
 	<wsdl:message name="HentIndbetalingRequestMessage">
-		<wsdl:part name="parameters" element="oir:HentIndbetalingRequestAuthType"/>
+		<wsdl:part name="request" element="oir:HentIndbetalingRequestAuthType"/>
 	</wsdl:message>
 	<wsdl:message name="HentIndbetalingResponseMessage">
-		<wsdl:part name="parameters" element="oir:HentIndbetalingResponseType"/>
+		<wsdl:part name="response" element="oir:HentIndbetalingResponseType"/>
 	</wsdl:message>
 
 	<wsdl:message name="StraksleveranceTransportkvittering">
@@ -311,8 +311,6 @@
 		<wsdl:operation name="ForetagEjerskifte">
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -323,10 +321,8 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="HentBSTilmeldningsstatus">
-			<soap:operation soapAction=""/>
+				<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>
@@ -337,10 +333,8 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="HentIndbetaling">
-			<soap:operation soapAction=""/>
+				<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
 			<wsdl:output>

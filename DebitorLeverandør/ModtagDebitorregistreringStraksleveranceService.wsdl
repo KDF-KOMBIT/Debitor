@@ -88,24 +88,24 @@
 	</wsdl:message>
 	
 	<wsdl:message name="ForetagEjerskifteRequestMessage">
-		<wsdl:part name="parameters" element="oir:ForetagEjerskifteRequestType"/>
+		<wsdl:part name="request" element="oir:ForetagEjerskifteRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="ForetagEjerskifteResponseMessage">
-		<wsdl:part name="parameters" element="oir:ForetagEjerskifteResponseType"/>
+		<wsdl:part name="response" element="oir:ForetagEjerskifteResponseType"/>
 	</wsdl:message>
 	
 	<wsdl:message name="HentBSTilmeldningsstatusRequestMessage">
-		<wsdl:part name="parameters" element="oir:HentBSTilmeldningsstatusRequestType"/>
+		<wsdl:part name="request" element="oir:HentBSTilmeldningsstatusRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="HentBSTilmeldningsstatusResponseMessage">
-		<wsdl:part name="parameters" element="oir:HentBSTilmeldningsstatusResponseType"/>
+		<wsdl:part name="response" element="oir:HentBSTilmeldningsstatusResponseType"/>
 	</wsdl:message>
 	
 	<wsdl:message name="HentIndbetalingRequestMessage">
-		<wsdl:part name="parameters" element="oir:HentIndbetalingRequestType"/>
+		<wsdl:part name="request" element="oir:HentIndbetalingRequestType"/>
 	</wsdl:message>
 	<wsdl:message name="HentIndbetalingResponseMessage">
-		<wsdl:part name="parameters" element="oir:HentIndbetalingResponseType"/>
+		<wsdl:part name="response" element="oir:HentIndbetalingResponseType"/>
 	</wsdl:message>
 	
 	<wsdl:message name="StraksleveranceTransportkvittering">
@@ -186,10 +186,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -204,10 +200,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -222,10 +214,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -240,10 +228,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -272,10 +256,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -290,10 +270,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -308,10 +284,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -326,10 +298,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -344,8 +312,6 @@
 			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-<<<<<<< HEAD
-				<!-- input policy reference -->
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -357,9 +323,9 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="ForetagEjerskifte">
+			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
 			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -372,8 +338,9 @@
 		</wsdl:operation>
 		<wsdl:operation name="HentBSTilmeldningsstatus">
 			<soap:operation soapAction=""/>
+			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
+			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -386,10 +353,9 @@
 		</wsdl:operation>
 		<wsdl:operation name="HentIndbetaling">
 			<soap:operation soapAction=""/>
+			<wsp:PolicyReference URI="#TokenBindingPolicy"/>
+			<soap:operation soapAction=""/>
 			<wsdl:input>
-				<!-- input policy reference -->
-=======
->>>>>>> Version_2.8
 				<wsp:PolicyReference URI="#Input_Policy"/>
 				<soap:body use="literal"/>
 			</wsdl:input>
@@ -401,66 +367,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 	</wsdl:binding>
-<<<<<<< HEAD
-	<wsdl:service name="ModtagDebitorregistreringStraksleveranceService">
-		<wsdl:port name="ModtagDebitorregistreringStraksleveranceServicePort" binding="oir:ModtagDebitorregistreringStraksleveranceServiceBinding">
-			<soap:address location="http://localhost:8080/service/OiRDebitor/1"/>
-			<wsp:PolicyReference URI="#TLS_policy"/>
-		</wsdl:port>
-	</wsdl:service>
-	<wsp:Policy wsu:Id="STS_SAML_Token_policy_optional">
-		<sp:SignedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
-			<wsp:Policy wsp:Optional="true">
-				<sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
-					<!-- Nedenstående Issuer address er pt. ikke rigtig idet STS endpoint ikke kendt-->
-					<sp:Issuer>
-						<wsa:Address>https://url-til-sts</wsa:Address>
-					</sp:Issuer>
-					<sp:RequestSecurityTokenTemplate>
-						<trust:TokenType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">urn:oasis:names:tc:SAML:2.0:assertion</trust:TokenType>
-					</sp:RequestSecurityTokenTemplate>
-					<wsp:Policy>
-						<sp:RequireInternalReference/>
-					</wsp:Policy>
-				</sp:IssuedToken>
-				<sp:IncludeTimestamp/>
-				<sp:ProtectTokens/>
-				<sp:OnlySignEntireHeadersAndBody/>
-			</wsp:Policy>
-		</sp:SignedSupportingTokens>
-	</wsp:Policy>
-	<!-- TLS policy for communicating with SP -->
-	<wsp:Policy wsu:Id="TLS_policy">
-		<sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
-			<wsp:Policy>
-				<sp:TransportToken>
-					<wsp:Policy>
-						<sp:HttpsToken RequireClientCertificate="true"/>
-					</wsp:Policy>
-				</sp:TransportToken>
-				<sp:AlgorithmSuite>
-					<wsp:Policy>
-						<sp:Basic128/>
-					</wsp:Policy>
-				</sp:AlgorithmSuite>
-			</wsp:Policy>
-		</sp:TransportBinding>
-	</wsp:Policy>
-	<!-- Input policy for signing input -->
-	<wsp:Policy wsu:Id="Input_Policy">
-		<wsp:ExactlyOne>
-			<wsp:All>
-				<sp:SignedParts>
-					<sp:Body/>
-					<sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/>
-					<sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/>
-					<sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/>
-					<sp:Header Name="Framework" Namespace="urn:liberty:sb"/>
-				</sp:SignedParts>
-			</wsp:All>
-		</wsp:ExactlyOne>
-	</wsp:Policy>
-=======
+	
 	
 	<wsdl:service name="ModtagDebitorregistreringStraksleveranceService">
 		<wsdl:port name="ModtagDebitorregistreringStraksleveranceServicePort" binding="oir:ModtagDebitorregistreringStraksleveranceServiceBinding">
@@ -564,7 +471,6 @@
         </wsp:ExactlyOne>
     </wsp:Policy>
 	
->>>>>>> Version_2.8
 	<xsd:annotation>
 		<xsd:documentation xml:lang="en">
 			Version 1.0 of the API for the ModtagDebitorregistreringStraksleveranceService
