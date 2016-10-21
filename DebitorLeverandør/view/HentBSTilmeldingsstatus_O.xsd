@@ -59,10 +59,10 @@
 												<xs:sequence>
 													<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
 													<xs:element ref="oir:DebitorLeverancedataRegistreringstidspunkt"/>
-													<xs:element name="DebitorkontoTypeKvittering" maxOccurs="unbounded">
+													<xs:element name="DebitorKvittering" maxOccurs="unbounded">
 														<xs:complexType>
 															<xs:sequence>
-																<xs:element name="DebitorkontoTypeKvittering">
+																<xs:element name="DebitorkontoIDTypeValg">
 																	<xs:complexType>
 																		<xs:choice>
 																			<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>

@@ -333,7 +333,7 @@
 	<xs:element name="HentIndbetalingResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:KvitteringIndbetalingValg"/>
+				<xs:element ref="oir:KvitteringHentIndbetaling"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
