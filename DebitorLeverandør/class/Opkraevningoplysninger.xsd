@@ -33,6 +33,16 @@
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
+	<xs:element name="OpkraevningsoplysningerBetalingsReference">
+		<xs:annotation>
+			<xs:documentation>Angiver hvilken betalingsreference, der horer til en allerede udskrevet faktura. Bruges senere ved modtagelse af indbetalinger til saadan en faktura. F.eks. laeselinjen fra fakturaen. Baseret på InstructionID (BetalingsID) fra oioubl.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="60"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
 	<xs:element name="OpkraevningsoplysningerSidsteRettidigBetalingsdato" type="xs:date">
 		<xs:annotation>
 			<xs:documentation>Angiver sidste rettidige betalingsdato, der horer til en allerede udskrevet faktura. Bruges senere ved renteberegning, hvis der ikke modtages rettidig betaling.</xs:documentation>

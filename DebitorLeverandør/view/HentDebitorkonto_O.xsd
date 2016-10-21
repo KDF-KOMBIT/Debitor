@@ -177,6 +177,7 @@
 													<xs:element ref="oir:OpkraevningsoplysningerFakturaNummer"/>
 													<xs:element ref="oir:OpkraevningsoplysningerOrdreNummer"/>
 													<xs:element ref="oir:OpkraevningsoplysningerFakturadato"/>
+													<xs:element ref="oir:OpkraevningsoplysningerBetalingsReference"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
