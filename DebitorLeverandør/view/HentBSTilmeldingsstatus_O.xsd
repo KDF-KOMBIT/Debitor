@@ -1,18 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Eskild Nejsum (KOMBIT A/S) -->
+<!-- edited with XMLSpy v2017 (x64) (http://www.altova.com) by Jørgen Holmenlund (A-2 A/S) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V3" targetNamespace="urn:oio:kl:kdi:oir:1590_B_V3" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>HentBSTilmeldingsstatus_O</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
-	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
-	<xs:element name="KvitteringTilmeldingsstatusValg">
+	<xs:include schemaLocation="../class/DebitorKvittering.xsd"/>
+	<xs:include schemaLocation="../class/DebitorLeverancedata.xsd"/>
+	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
+	<xs:include schemaLocation="../class/Materialemodtager.xsd"/>
+	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
+	<xs:include schemaLocation="../class/Fordring.xsd"/>
+	<xs:include schemaLocation="../class/Delfordring.xsd"/>
+	<xs:include schemaLocation="../class/JuridiskMedhaefter.xsd"/>
+	<xs:element name="KvitteringHentBSTilmeldingsstatus">
 		<xs:complexType>
-			<xs:choice>
-				<xs:element ref="oir:DebitorForretningskvittering"/>
-				<xs:element name="HentBSTilmeldingsstatusResultat">
+			<xs:sequence>
+				<xs:element ref="oir:DebitorKvitteringTransaktionsID"/>
+				<xs:element ref="oir:DebitorKvitteringRegistreringstidspunkt"/>
+				<xs:element ref="oir:DebitorLeverancedataAfgivendeMyndighed"/>
+				<xs:element ref="oir:DebitorLeverancedataDebitoransvarligMyndighed"/>
+				<xs:element ref="oir:DebitorLeverancedataAfgivendeITSystem"/>
+				<xs:element ref="oir:DebitorKvitteringDebitorITSystem"/>
+				<xs:element ref="oir:DebitorKvitteringAntalKvitteringer"/>
+				<xs:element name="HentBSTilmeldingsstatusFejl" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
+							<xs:element name="LeveranceRegistreringValg">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="DebitorLeveranceKvittering" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
+													<xs:element ref="oir:DebitorKvitteringValideringstidspunkt"/>
+													<xs:element ref="oir:DebitorKvitteringResultat"/>
+													<xs:element ref="oir:DebitorKvitteringBegrundelse"/>
+													<xs:element name="FejlAarsag" minOccurs="1" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:DebitorKvitteringAarsag"/>
+																<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="oir:DebitorKvitteringFejlkode"/>
+																			<xs:element ref="oir:DebitorKvitteringFejltekst" minOccurs="0"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Debitorregistrering">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
+													<xs:element ref="oir:DebitorLeverancedataRegistreringstidspunkt"/>
+													<xs:element name="DebitorkontoTypeKvittering" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="DebitorkontoTypeKvittering">
+																	<xs:complexType>
+																		<xs:choice>
+																			<xs:element ref="oir:DebitorkontoUnikIdentifikation"/>
+																			<xs:element ref="oir:DebitorkontoType"/>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element ref="oir:DebitorKvitteringValideringstidspunkt"/>
+																<xs:element ref="oir:DebitorKvitteringResultat"/>
+																<xs:element ref="oir:DebitorKvitteringBegrundelse" minOccurs="0"/>
+																<xs:element name="FejlAarsag" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="oir:DebitorKvitteringAarsag"/>
+																			<xs:element name="LokalFejl" minOccurs="0" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element ref="oir:DebitorKvitteringFejlkode"/>
+																						<xs:element ref="oir:DebitorKvitteringFejltekst" minOccurs="0"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="HentBSTilmeldingsstatusResultat" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="oir:DebitorLeverancedataTransaktionsID"/>
+							<xs:element ref="oir:DebitorLeverancedataRegistreringstidspunkt"/>
 							<xs:element name="Debitorkonto" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
@@ -24,7 +116,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-			</xs:choice>
+			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>

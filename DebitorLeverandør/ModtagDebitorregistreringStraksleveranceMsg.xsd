@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Eskild Nejsum (KOMBIT A/S) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V3" xmlns:callctx="http://serviceplatformen.dk/xml/schemas/CallContext/1/" xmlns:autctx="http://serviceplatformen.dk/xml/schemas/AuthorityContext/1/"  targetNamespace="urn:oio:kl:kdi:oir:1590_B_V3" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V3" xmlns:callctx="http://serviceplatformen.dk/xml/schemas/CallContext/1/" xmlns:autctx="http://serviceplatformen.dk/xml/schemas/AuthorityContext/1/" targetNamespace="urn:oio:kl:kdi:oir:1590_B_V3" elementFormDefault="qualified">
 	<xs:annotation>
 		<xs:documentation>Debitorrequests</xs:documentation>
 	</xs:annotation>
@@ -105,7 +105,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-		<xs:element name="AfslutLigestillingspartnerRequestAuthType">
+	<xs:element name="AfslutLigestillingspartnerRequestAuthType">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="autctx:AuthorityContext"/>
@@ -201,7 +201,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-		<xs:element name="HentDebitorkontoRequestAuthType">
+	<xs:element name="HentDebitorkontoRequestAuthType">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="autctx:AuthorityContext"/>
@@ -309,7 +309,7 @@
 	<xs:element name="HentBSTilmeldningsstatusResponseType">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="oir:KvitteringTilmeldingsstatusValg"/>
+				<xs:element ref="oir:KvitteringHentBSTilmeldingsstatus"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
