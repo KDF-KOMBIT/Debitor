@@ -29,6 +29,7 @@
 	<xs:include schemaLocation="../class/Haeftelse.xsd"/>
 	<xs:include schemaLocation="../class/Indbetaling.xsd"/>
 	<xs:include schemaLocation="../class/Daekning.xsd"/>
+	<xs:include schemaLocation="../class/Afskrivning.xsd"/>
 	<xs:include schemaLocation="../types/AdresseStruktur.xsd"/>
 	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
 	<xs:element name="KvitteringDebitorkontoValg">
@@ -223,10 +224,38 @@
 																<xs:element ref="oir:IndbetalingUnikIdentifikation"/>
 																<xs:element ref="oir:IndbetalingRegistreringsdato"/>
 																<xs:element ref="oir:DaekningBelob"/>
+																<xs:element name="Valuta" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="oir:ValutaValuta"/>
+																			<xs:element ref="oir:ValutaKurs"/>
+																			<xs:element ref="oir:ValutaOmregningsdato"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
 																<xs:element name="ErReguleringTil" minOccurs="0">
 																	<xs:complexType>
 																		<xs:sequence>
 																			<xs:element ref="oir:IndbetalingUnikIdentifikation"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Afskrivning" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="oir:AfskrivningUnikIdentifikation"/>
+																<xs:element ref="oir:AfskrivningRegistreringsdato"/>
+																<xs:element ref="oir:AfskrivningVirkningsdato"/>
+																<xs:element ref="oir:DaekningBelob"/>
+																<xs:element name="Valuta" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="oir:ValutaValuta"/>
+																			<xs:element ref="oir:ValutaKurs"/>
+																			<xs:element ref="oir:ValutaOmregningsdato"/>
 																		</xs:sequence>
 																	</xs:complexType>
 																</xs:element>

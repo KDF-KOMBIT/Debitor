@@ -153,7 +153,15 @@
 																			<xs:element ref="oir:IndbetalingRegistreringsdato"/>
 																			<xs:element ref="oir:IndbetalingBetalingsdato"/>
 																			<xs:element ref="oir:DaekningBelob"/>
-																			<xs:element ref="oir:ValutaValuta"/>
+																			<xs:element name="Valuta" minOccurs="0">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element ref="oir:ValutaValuta"/>
+																						<xs:element ref="oir:ValutaKurs"/>
+																						<xs:element ref="oir:ValutaOmregningsdato"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
 																		</xs:sequence>
 																	</xs:complexType>
 																</xs:element>

@@ -9,6 +9,7 @@
 	<xs:include schemaLocation="../class/Delfordring.xsd"/>
 	<xs:include schemaLocation="../class/JuridiskAnsvarlig.xsd"/>
 	<xs:include schemaLocation="../class/TransienteElementer.xsd"/>
+	<xs:include schemaLocation="../class/Valuta.xsd"/>
 	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
 	<xs:element name="KvitteringIndbetalingResultatValg">
 		<xs:complexType>
@@ -41,6 +42,15 @@
 																			<xs:element ref="oir:DelfordringFolsomhed"/>
 																			<xs:element ref="oir:DelfordringBelob"/>
 																			<xs:element ref="oir:RestanceBelob"/>
+																			<xs:element name="Valuta" minOccurs="0">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element ref="oir:ValutaValuta"/>
+																						<xs:element ref="oir:ValutaKurs"/>
+																						<xs:element ref="oir:ValutaOmregningsdato"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
 																		</xs:sequence>
 																	</xs:complexType>
 																</xs:element>
