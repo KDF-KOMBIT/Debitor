@@ -25,6 +25,8 @@
 	<xs:include schemaLocation="view/HentBSTilmeldingsstatus_O.xsd"/>
 	<xs:include schemaLocation="view/HentIndbetaling_I.xsd"/>
 	<xs:include schemaLocation="view/HentIndbetaling_O.xsd"/>
+	<xs:include schemaLocation="view/HentSidsteRettidigIndbetaling_I.xsd"/>
+	<xs:include schemaLocation="view/HentSidsteRettidigIndbetaling_O.xsd"/>
 	<xs:element name="OpretRequestType">
 		<xs:complexType>
 			<xs:sequence>
@@ -334,6 +336,30 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="oir:KvitteringHentIndbetaling"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		<xs:element name="HentSidsteRettidigIndbetalingRequestType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:HentSidsteRettidigIndbetaling"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HentSidsteRettidigIndbetalingRequestAuthType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="autctx:AuthorityContext"/>
+				<xs:element ref="callctx:CallContext" minOccurs="0"/>
+				<xs:element ref="oir:HentSidsteRettidigIndbetaling"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HentSidsteRettidigIndbetalingResponseType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="oir:KvitteringHentSidsteRettidigIndbetalingValg"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

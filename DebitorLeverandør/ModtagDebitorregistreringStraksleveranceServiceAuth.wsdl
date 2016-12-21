@@ -113,6 +113,13 @@
 	<wsdl:message name="HentIndbetalingResponseMessage">
 		<wsdl:part name="response" element="oir:HentIndbetalingResponseType"/>
 	</wsdl:message>
+	
+	<wsdl:message name="HentSidsteRettidigIndbetalingRequestMessage">
+		<wsdl:part name="request" element="oir:HentIndbetalingRequestAuthType"/>
+	</wsdl:message>
+	<wsdl:message name="HentSidsteRettidigIndbetalingResponseMessage">
+		<wsdl:part name="response" element="oir:HentIndbetalingResponseType"/>
+	</wsdl:message>
 
 	<wsdl:message name="StraksleveranceTransportkvittering">
 		<wsdl:part name="fault" element="oir:StraksleveranceTransportkvittering"/>
@@ -182,6 +189,11 @@
 		<wsdl:operation name="HentIndbetaling">
 			<wsdl:input message="oir:HentIndbetalingRequestMessage"/>
 			<wsdl:output message="oir:HentIndbetalingResponseMessage"/>
+			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
+		</wsdl:operation>
+		<wsdl:operation name="HentSidsteRettidigIndbetaling">
+			<wsdl:input message="oir:HentSidsteRettidigIndbetalingRequestMessage"/>
+			<wsdl:output message="oir:HentSidsteRettidigIndbetalingResponseMessage"/>
 			<wsdl:fault name="StraksleveranceTransportkvittering" message="oir:StraksleveranceTransportkvittering"/>
 		</wsdl:operation>
 	</wsdl:portType>
@@ -333,6 +345,18 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="HentIndbetaling">
+				<soap:operation soapAction=""/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="StraksleveranceTransportkvittering">
+				<soap:fault name="StraksleveranceTransportkvittering" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="HentSidsteRettidigIndbetaling">
 				<soap:operation soapAction=""/>
 			<wsdl:input>
 				<soap:body use="literal"/>

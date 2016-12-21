@@ -2,13 +2,13 @@
 <!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Eskild Nejsum (KOMBIT A/S) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oir="urn:oio:kl:kdi:oir:1590_B_V3" targetNamespace="urn:oio:kl:kdi:oir:1590_B_V3" elementFormDefault="qualified">
 	<xs:annotation>
-		<xs:documentation>SidsteRettidigIndbetalingHent_O</xs:documentation>
+		<xs:documentation>HentSidsteRettidigIndbetaling_O</xs:documentation>
 	</xs:annotation>
 	<xs:include schemaLocation="../class/Debitorkonto.xsd"/>
 	<xs:include schemaLocation="../class/Opkraevningoplysninger.xsd"/>
 	<xs:include schemaLocation="../class/DebitorLeverancedata.xsd"/>
 	<xs:include schemaLocation="../view/DebitorForretningskvittering.xsd"/>
-	<xs:element name="KvitteringRegistreringResultatValg">
+	<xs:element name="KvitteringHentSidsteRettidigIndbetalingValg">
 		<xs:complexType>
 			<xs:choice>
 				<xs:element ref="oir:DebitorForretningskvittering"/>
