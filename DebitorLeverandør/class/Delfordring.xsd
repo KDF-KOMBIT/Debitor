@@ -21,7 +21,7 @@
 			<xs:documentation>Organisatorisk reference til det IT system som har oprettet delfordringen. Angivet som UUID i organisation.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-	<xs:element name="DelfordringOprettetDatoTid" type="xs:date">
+	<xs:element name="DelfordringOprettetDatoTid" type="xs:dateTime">
 		<xs:annotation>
 			<xs:documentation>Dato og tidspunkt for oprettelsen af delfordringen</xs:documentation>
 		</xs:annotation>
@@ -31,7 +31,9 @@
 			<xs:documentation>Angiver det antal enheder der onskes betalt for. Antallet er angivet i tusinddele – dvs. 1,000 skrives som 1000. Bruges i forbindelse med elektronisk opkraevning.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:integer"><xs:totalDigits value="18"/></xs:restriction>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="18"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
 	<xs:element name="DelfordringEnhed" type="oir:UUIDType">
@@ -79,7 +81,9 @@
 			<xs:documentation>Fritekstfelt til yderligere at beskrive en aendring.</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
-			<xs:restriction base="xs:string"><xs:maxLength value="100"/></xs:restriction>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="100"/>
+			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
 	<xs:element name="DelfordringInddrivelseMarkering" type="xs:boolean">
